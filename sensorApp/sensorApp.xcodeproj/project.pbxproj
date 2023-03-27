@@ -18,6 +18,7 @@
 		F6ADAF9029D1F92200AE1C2C /* sensorAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ADAF8F29D1F92200AE1C2C /* sensorAppUITestsLaunchTests.swift */; };
 		F6ADAFA229D1FC5700AE1C2C /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ADAFA129D1FC5700AE1C2C /* MovieCollectionViewCell.swift */; };
 		F6ADAFA729D1FC9C00AE1C2C /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ADAFA629D1FC9C00AE1C2C /* Movie.swift */; };
+		F6ADAFAD29D2394600AE1C2C /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ADAFAC29D2394600AE1C2C /* ReportViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		F6ADAF8F29D1F92200AE1C2C /* sensorAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sensorAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F6ADAFA129D1FC5700AE1C2C /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
 		F6ADAFA629D1FC9C00AE1C2C /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		F6ADAFAC29D2394600AE1C2C /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,14 +105,11 @@
 		F6ADAF6B29D1F92000AE1C2C /* sensorApp */ = {
 			isa = PBXGroup;
 			children = (
+				F6ADAFAB29D2391B00AE1C2C /* App */,
+				F6ADAFAA29D2390E00AE1C2C /* HomeScreen */,
+				F6ADAFA929D238F300AE1C2C /* ReportScreen */,
 				F6ADAFA329D1FC8700AE1C2C /* Model */,
-				F6ADAF6C29D1F92000AE1C2C /* AppDelegate.swift */,
-				F6ADAF6E29D1F92000AE1C2C /* SceneDelegate.swift */,
-				F6ADAF7029D1F92000AE1C2C /* ViewController.swift */,
-				F6ADAFA129D1FC5700AE1C2C /* MovieCollectionViewCell.swift */,
-				F6ADAF7229D1F92000AE1C2C /* Main.storyboard */,
 				F6ADAF7529D1F92100AE1C2C /* Assets.xcassets */,
-				F6ADAF7729D1F92100AE1C2C /* LaunchScreen.storyboard */,
 				F6ADAF7A29D1F92100AE1C2C /* Info.plist */,
 			);
 			path = sensorApp;
@@ -139,6 +138,34 @@
 				F6ADAFA629D1FC9C00AE1C2C /* Movie.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		F6ADAFA929D238F300AE1C2C /* ReportScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F6ADAFAC29D2394600AE1C2C /* ReportViewController.swift */,
+			);
+			path = ReportScreen;
+			sourceTree = "<group>";
+		};
+		F6ADAFAA29D2390E00AE1C2C /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F6ADAFA129D1FC5700AE1C2C /* MovieCollectionViewCell.swift */,
+				F6ADAF7029D1F92000AE1C2C /* ViewController.swift */,
+			);
+			path = HomeScreen;
+			sourceTree = "<group>";
+		};
+		F6ADAFAB29D2391B00AE1C2C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F6ADAF6C29D1F92000AE1C2C /* AppDelegate.swift */,
+				F6ADAF6E29D1F92000AE1C2C /* SceneDelegate.swift */,
+				F6ADAF7229D1F92000AE1C2C /* Main.storyboard */,
+				F6ADAF7729D1F92100AE1C2C /* LaunchScreen.storyboard */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +301,7 @@
 			files = (
 				F6ADAF7129D1F92000AE1C2C /* ViewController.swift in Sources */,
 				F6ADAF6D29D1F92000AE1C2C /* AppDelegate.swift in Sources */,
+				F6ADAFAD29D2394600AE1C2C /* ReportViewController.swift in Sources */,
 				F6ADAFA729D1FC9C00AE1C2C /* Movie.swift in Sources */,
 				F6ADAFA229D1FC5700AE1C2C /* MovieCollectionViewCell.swift in Sources */,
 				F6ADAF6F29D1F92000AE1C2C /* SceneDelegate.swift in Sources */,

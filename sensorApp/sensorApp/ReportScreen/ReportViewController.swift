@@ -1,0 +1,17 @@
+//
+//  ReportViewController.swift
+//  sensorApp
+//
+//  Created by Ömer Oğuz Çelikel on 27.03.2023.
+//
+
+import UIKit
+
+class ReportViewController: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+    }
+
+}

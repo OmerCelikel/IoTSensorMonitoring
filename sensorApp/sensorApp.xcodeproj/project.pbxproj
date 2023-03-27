@@ -16,6 +16,8 @@
 		F6ADAF8429D1F92100AE1C2C /* sensorAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ADAF8329D1F92100AE1C2C /* sensorAppTests.swift */; };
 		F6ADAF8E29D1F92200AE1C2C /* sensorAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ADAF8D29D1F92200AE1C2C /* sensorAppUITests.swift */; };
 		F6ADAF9029D1F92200AE1C2C /* sensorAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ADAF8F29D1F92200AE1C2C /* sensorAppUITestsLaunchTests.swift */; };
+		F6ADAFA229D1FC5700AE1C2C /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ADAFA129D1FC5700AE1C2C /* MovieCollectionViewCell.swift */; };
+		F6ADAFA729D1FC9C00AE1C2C /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ADAFA629D1FC9C00AE1C2C /* Movie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		F6ADAF8929D1F92200AE1C2C /* sensorAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sensorAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6ADAF8D29D1F92200AE1C2C /* sensorAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sensorAppUITests.swift; sourceTree = "<group>"; };
 		F6ADAF8F29D1F92200AE1C2C /* sensorAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sensorAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F6ADAFA129D1FC5700AE1C2C /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
+		F6ADAFA629D1FC9C00AE1C2C /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +103,11 @@
 		F6ADAF6B29D1F92000AE1C2C /* sensorApp */ = {
 			isa = PBXGroup;
 			children = (
+				F6ADAFA329D1FC8700AE1C2C /* Model */,
 				F6ADAF6C29D1F92000AE1C2C /* AppDelegate.swift */,
 				F6ADAF6E29D1F92000AE1C2C /* SceneDelegate.swift */,
 				F6ADAF7029D1F92000AE1C2C /* ViewController.swift */,
+				F6ADAFA129D1FC5700AE1C2C /* MovieCollectionViewCell.swift */,
 				F6ADAF7229D1F92000AE1C2C /* Main.storyboard */,
 				F6ADAF7529D1F92100AE1C2C /* Assets.xcassets */,
 				F6ADAF7729D1F92100AE1C2C /* LaunchScreen.storyboard */,
@@ -125,6 +131,14 @@
 				F6ADAF8F29D1F92200AE1C2C /* sensorAppUITestsLaunchTests.swift */,
 			);
 			path = sensorAppUITests;
+			sourceTree = "<group>";
+		};
+		F6ADAFA329D1FC8700AE1C2C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F6ADAFA629D1FC9C00AE1C2C /* Movie.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +274,8 @@
 			files = (
 				F6ADAF7129D1F92000AE1C2C /* ViewController.swift in Sources */,
 				F6ADAF6D29D1F92000AE1C2C /* AppDelegate.swift in Sources */,
+				F6ADAFA729D1FC9C00AE1C2C /* Movie.swift in Sources */,
+				F6ADAFA229D1FC5700AE1C2C /* MovieCollectionViewCell.swift in Sources */,
 				F6ADAF6F29D1F92000AE1C2C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

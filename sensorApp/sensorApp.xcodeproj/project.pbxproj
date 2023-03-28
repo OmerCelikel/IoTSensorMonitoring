@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F611F4A729D2ED2D003D4ACB /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F611F4A529D2ED2D003D4ACB /* CategoryCollectionViewCell.swift */; };
+		F611F4A829D2ED2D003D4ACB /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F611F4A629D2ED2D003D4ACB /* CategoryCollectionViewCell.xib */; };
+		F611F4AB29D2ED9E003D4ACB /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = F611F4AA29D2ED9E003D4ACB /* Kingfisher */; };
+		F611F4AD29D2EDC8003D4ACB /* DishCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F611F4AC29D2EDC8003D4ACB /* DishCategory.swift */; };
+		F611F4B129D2EE43003D4ACB /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F611F4B029D2EE43003D4ACB /* String+Extension.swift */; };
+		F611F4B429D2EE6F003D4ACB /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F611F4B329D2EE6F003D4ACB /* CardView.swift */; };
+		F611F4B629D2EE9F003D4ACB /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F611F4B529D2EE9F003D4ACB /* UIView+Extension.swift */; };
+		F611F4B829D3217F003D4ACB /* TimeCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F611F4B729D3217F003D4ACB /* TimeCategory.swift */; };
+		F611F4BC29D32316003D4ACB /* TimeCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F611F4BA29D32316003D4ACB /* TimeCategoryCollectionViewCell.swift */; };
+		F611F4BD29D32316003D4ACB /* TimeCategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F611F4BB29D32316003D4ACB /* TimeCategoryCollectionViewCell.xib */; };
 		F6ADAF6D29D1F92000AE1C2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ADAF6C29D1F92000AE1C2C /* AppDelegate.swift */; };
 		F6ADAF6F29D1F92000AE1C2C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ADAF6E29D1F92000AE1C2C /* SceneDelegate.swift */; };
 		F6ADAF7129D1F92000AE1C2C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ADAF7029D1F92000AE1C2C /* ViewController.swift */; };
@@ -16,6 +26,9 @@
 		F6ADAF8429D1F92100AE1C2C /* sensorAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ADAF8329D1F92100AE1C2C /* sensorAppTests.swift */; };
 		F6ADAF8E29D1F92200AE1C2C /* sensorAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ADAF8D29D1F92200AE1C2C /* sensorAppUITests.swift */; };
 		F6ADAF9029D1F92200AE1C2C /* sensorAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ADAF8F29D1F92200AE1C2C /* sensorAppUITestsLaunchTests.swift */; };
+		F6ADAFA229D1FC5700AE1C2C /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ADAFA129D1FC5700AE1C2C /* MovieCollectionViewCell.swift */; };
+		F6ADAFA729D1FC9C00AE1C2C /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ADAFA629D1FC9C00AE1C2C /* Movie.swift */; };
+		F6ADAFAD29D2394600AE1C2C /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ADAFAC29D2394600AE1C2C /* ReportViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +49,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F611F4A529D2ED2D003D4ACB /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		F611F4A629D2ED2D003D4ACB /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		F611F4AC29D2EDC8003D4ACB /* DishCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishCategory.swift; sourceTree = "<group>"; };
+		F611F4B029D2EE43003D4ACB /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		F611F4B329D2EE6F003D4ACB /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		F611F4B529D2EE9F003D4ACB /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		F611F4B729D3217F003D4ACB /* TimeCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCategory.swift; sourceTree = "<group>"; };
+		F611F4BA29D32316003D4ACB /* TimeCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		F611F4BB29D32316003D4ACB /* TimeCategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeCategoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		F6ADAF6929D1F92000AE1C2C /* sensorApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sensorApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6ADAF6C29D1F92000AE1C2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6ADAF6E29D1F92000AE1C2C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +71,9 @@
 		F6ADAF8929D1F92200AE1C2C /* sensorAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sensorAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6ADAF8D29D1F92200AE1C2C /* sensorAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sensorAppUITests.swift; sourceTree = "<group>"; };
 		F6ADAF8F29D1F92200AE1C2C /* sensorAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sensorAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F6ADAFA129D1FC5700AE1C2C /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
+		F6ADAFA629D1FC9C00AE1C2C /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		F6ADAFAC29D2394600AE1C2C /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F611F4AB29D2ED9E003D4ACB /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +102,69 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F611F4A229D2ECC6003D4ACB /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				F611F4B229D2EE68003D4ACB /* CardView */,
+				F611F4A329D2ECD0003D4ACB /* CollectionViewCells */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		F611F4A329D2ECD0003D4ACB /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				F6ADAFA129D1FC5700AE1C2C /* MovieCollectionViewCell.swift */,
+				F611F4B929D322F7003D4ACB /* TimeCategoryViewCell */,
+				F611F4A429D2ECE5003D4ACB /* CategoryCollectionViewCell */,
+			);
+			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		F611F4A429D2ECE5003D4ACB /* CategoryCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				F611F4A529D2ED2D003D4ACB /* CategoryCollectionViewCell.swift */,
+				F611F4A629D2ED2D003D4ACB /* CategoryCollectionViewCell.xib */,
+			);
+			path = CategoryCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		F611F4AE29D2EE05003D4ACB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F6ADAFAA29D2390E00AE1C2C /* HomeScreen */,
+				F6ADAFA929D238F300AE1C2C /* ReportScreen */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F611F4AF29D2EE2F003D4ACB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F611F4B029D2EE43003D4ACB /* String+Extension.swift */,
+				F611F4B529D2EE9F003D4ACB /* UIView+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F611F4B229D2EE68003D4ACB /* CardView */ = {
+			isa = PBXGroup;
+			children = (
+				F611F4B329D2EE6F003D4ACB /* CardView.swift */,
+			);
+			path = CardView;
+			sourceTree = "<group>";
+		};
+		F611F4B929D322F7003D4ACB /* TimeCategoryViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				F611F4BA29D32316003D4ACB /* TimeCategoryCollectionViewCell.swift */,
+				F611F4BB29D32316003D4ACB /* TimeCategoryCollectionViewCell.xib */,
+			);
+			path = TimeCategoryViewCell;
+			sourceTree = "<group>";
+		};
 		F6ADAF6029D1F92000AE1C2C = {
 			isa = PBXGroup;
 			children = (
@@ -99,12 +188,11 @@
 		F6ADAF6B29D1F92000AE1C2C /* sensorApp */ = {
 			isa = PBXGroup;
 			children = (
-				F6ADAF6C29D1F92000AE1C2C /* AppDelegate.swift */,
-				F6ADAF6E29D1F92000AE1C2C /* SceneDelegate.swift */,
-				F6ADAF7029D1F92000AE1C2C /* ViewController.swift */,
-				F6ADAF7229D1F92000AE1C2C /* Main.storyboard */,
-				F6ADAF7529D1F92100AE1C2C /* Assets.xcassets */,
-				F6ADAF7729D1F92100AE1C2C /* LaunchScreen.storyboard */,
+				F611F4AF29D2EE2F003D4ACB /* Extensions */,
+				F6ADAFAB29D2391B00AE1C2C /* App */,
+				F611F4AE29D2EE05003D4ACB /* Views */,
+				F611F4A229D2ECC6003D4ACB /* CustomViews */,
+				F6ADAFA329D1FC8700AE1C2C /* Models */,
 				F6ADAF7A29D1F92100AE1C2C /* Info.plist */,
 			);
 			path = sensorApp;
@@ -127,6 +215,44 @@
 			path = sensorAppUITests;
 			sourceTree = "<group>";
 		};
+		F6ADAFA329D1FC8700AE1C2C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F6ADAFA629D1FC9C00AE1C2C /* Movie.swift */,
+				F611F4AC29D2EDC8003D4ACB /* DishCategory.swift */,
+				F611F4B729D3217F003D4ACB /* TimeCategory.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F6ADAFA929D238F300AE1C2C /* ReportScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F6ADAFAC29D2394600AE1C2C /* ReportViewController.swift */,
+			);
+			path = ReportScreen;
+			sourceTree = "<group>";
+		};
+		F6ADAFAA29D2390E00AE1C2C /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F6ADAF7029D1F92000AE1C2C /* ViewController.swift */,
+			);
+			path = HomeScreen;
+			sourceTree = "<group>";
+		};
+		F6ADAFAB29D2391B00AE1C2C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F6ADAF7529D1F92100AE1C2C /* Assets.xcassets */,
+				F6ADAF6C29D1F92000AE1C2C /* AppDelegate.swift */,
+				F6ADAF6E29D1F92000AE1C2C /* SceneDelegate.swift */,
+				F6ADAF7229D1F92000AE1C2C /* Main.storyboard */,
+				F6ADAF7729D1F92100AE1C2C /* LaunchScreen.storyboard */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +269,9 @@
 			dependencies = (
 			);
 			name = sensorApp;
+			packageProductDependencies = (
+				F611F4AA29D2ED9E003D4ACB /* Kingfisher */,
+			);
 			productName = sensorApp;
 			productReference = F6ADAF6929D1F92000AE1C2C /* sensorApp.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +344,9 @@
 				Base,
 			);
 			mainGroup = F6ADAF6029D1F92000AE1C2C;
+			packageReferences = (
+				F611F4A929D2ED9E003D4ACB /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = F6ADAF6A29D1F92000AE1C2C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -231,6 +363,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F611F4BD29D32316003D4ACB /* TimeCategoryCollectionViewCell.xib in Resources */,
+				F611F4A829D2ED2D003D4ACB /* CategoryCollectionViewCell.xib in Resources */,
 				F6ADAF7929D1F92100AE1C2C /* LaunchScreen.storyboard in Resources */,
 				F6ADAF7629D1F92100AE1C2C /* Assets.xcassets in Resources */,
 				F6ADAF7429D1F92000AE1C2C /* Main.storyboard in Resources */,
@@ -258,8 +392,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F611F4B629D2EE9F003D4ACB /* UIView+Extension.swift in Sources */,
 				F6ADAF7129D1F92000AE1C2C /* ViewController.swift in Sources */,
+				F611F4B129D2EE43003D4ACB /* String+Extension.swift in Sources */,
 				F6ADAF6D29D1F92000AE1C2C /* AppDelegate.swift in Sources */,
+				F6ADAFAD29D2394600AE1C2C /* ReportViewController.swift in Sources */,
+				F611F4B429D2EE6F003D4ACB /* CardView.swift in Sources */,
+				F611F4AD29D2EDC8003D4ACB /* DishCategory.swift in Sources */,
+				F6ADAFA729D1FC9C00AE1C2C /* Movie.swift in Sources */,
+				F6ADAFA229D1FC5700AE1C2C /* MovieCollectionViewCell.swift in Sources */,
+				F611F4A729D2ED2D003D4ACB /* CategoryCollectionViewCell.swift in Sources */,
+				F611F4BC29D32316003D4ACB /* TimeCategoryCollectionViewCell.swift in Sources */,
+				F611F4B829D3217F003D4ACB /* TimeCategory.swift in Sources */,
 				F6ADAF6F29D1F92000AE1C2C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -602,6 +746,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F611F4A929D2ED9E003D4ACB /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F611F4AA29D2ED9E003D4ACB /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F611F4A929D2ED9E003D4ACB /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F6ADAF6129D1F92000AE1C2C /* Project object */;
 }

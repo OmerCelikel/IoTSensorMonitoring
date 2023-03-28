@@ -36,8 +36,16 @@ extension ViewController: UICollectionViewDataSource {
 
 extension ViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = (collectionView.bounds.width - 10) / 2
-        return CGSize(width: width, height: 300)
+        if indexPath.item == 0 {
+                    // Set larger size for first item
+                    let width = collectionView.bounds.width
+                    let height = collectionView.bounds.height * 0.5
+                    return CGSize(width: width, height: height)
+                } else {
+                    // Set default size for all other items
+                    let width = (collectionView.bounds.width - 10) / 2
+                    return CGSize(width: width, height: 300)
+                }
     }
 }
 

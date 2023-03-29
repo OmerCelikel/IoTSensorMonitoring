@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Charts
 
 class ViewController: UIViewController {
     
@@ -23,13 +24,16 @@ class ViewController: UIViewController {
 
 extension ViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return movies.count
+        return chartData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MovieCollectionViewCell", for: indexPath) as! MovieCollectionViewCell
-        cell.setup(with: movies[indexPath.row])
+//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MovieCollectionViewCell", for: indexPath) as! MovieCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "LineChartsCollectionViewCell", for: indexPath) as! LineChartsCollectionViewCell
+        print("-> \(chartData[indexPath.row])")
+        cell.setup(with: chartData[indexPath.row])
+//        cell.setup()
         return cell
     }
 }
@@ -44,14 +48,10 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
                 } else {
                     // Set default size for all other items
                     let width = (collectionView.bounds.width - 10) / 2
-                    return CGSize(width: width, height: 300)
+                    return CGSize(width: width, height: 200)
                 }
     }
-}
-
-extension ViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(movies[indexPath.row].title)
+        print("-> \(chartData[indexPath.row].name)")
     }
 }
-

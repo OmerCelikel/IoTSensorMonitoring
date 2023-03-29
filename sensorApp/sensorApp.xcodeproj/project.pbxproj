@@ -17,6 +17,11 @@
 		F611F4B829D3217F003D4ACB /* TimeCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F611F4B729D3217F003D4ACB /* TimeCategory.swift */; };
 		F611F4BC29D32316003D4ACB /* TimeCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F611F4BA29D32316003D4ACB /* TimeCategoryCollectionViewCell.swift */; };
 		F611F4BD29D32316003D4ACB /* TimeCategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F611F4BB29D32316003D4ACB /* TimeCategoryCollectionViewCell.xib */; };
+		F611F4F129D44181003D4ACB /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = F611F4F029D44181003D4ACB /* Charts */; };
+		F611F4F329D44368003D4ACB /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F611F4F229D44368003D4ACB /* GraphView.swift */; };
+		F611F4FE29D4573A003D4ACB /* LineChartsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F611F4FC29D4573A003D4ACB /* LineChartsCollectionViewCell.swift */; };
+		F611F4FF29D4573A003D4ACB /* LineChartsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F611F4FD29D4573A003D4ACB /* LineChartsCollectionViewCell.xib */; };
+		F611F50129D45B37003D4ACB /* ChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F611F50029D45B37003D4ACB /* ChartData.swift */; };
 		F6ADAF6D29D1F92000AE1C2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ADAF6C29D1F92000AE1C2C /* AppDelegate.swift */; };
 		F6ADAF6F29D1F92000AE1C2C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ADAF6E29D1F92000AE1C2C /* SceneDelegate.swift */; };
 		F6ADAF7129D1F92000AE1C2C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ADAF7029D1F92000AE1C2C /* ViewController.swift */; };
@@ -58,6 +63,10 @@
 		F611F4B729D3217F003D4ACB /* TimeCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCategory.swift; sourceTree = "<group>"; };
 		F611F4BA29D32316003D4ACB /* TimeCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		F611F4BB29D32316003D4ACB /* TimeCategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeCategoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		F611F4F229D44368003D4ACB /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
+		F611F4FC29D4573A003D4ACB /* LineChartsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartsCollectionViewCell.swift; sourceTree = "<group>"; };
+		F611F4FD29D4573A003D4ACB /* LineChartsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LineChartsCollectionViewCell.xib; sourceTree = "<group>"; };
+		F611F50029D45B37003D4ACB /* ChartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartData.swift; sourceTree = "<group>"; };
 		F6ADAF6929D1F92000AE1C2C /* sensorApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sensorApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6ADAF6C29D1F92000AE1C2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6ADAF6E29D1F92000AE1C2C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +91,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F611F4AB29D2ED9E003D4ACB /* Kingfisher in Frameworks */,
+				F611F4F129D44181003D4ACB /* Charts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +127,8 @@
 				F6ADAFA129D1FC5700AE1C2C /* MovieCollectionViewCell.swift */,
 				F611F4B929D322F7003D4ACB /* TimeCategoryViewCell */,
 				F611F4A429D2ECE5003D4ACB /* CategoryCollectionViewCell */,
+				F611F4FC29D4573A003D4ACB /* LineChartsCollectionViewCell.swift */,
+				F611F4FD29D4573A003D4ACB /* LineChartsCollectionViewCell.xib */,
 			);
 			path = CollectionViewCells;
 			sourceTree = "<group>";
@@ -152,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				F611F4B329D2EE6F003D4ACB /* CardView.swift */,
+				F611F4F229D44368003D4ACB /* GraphView.swift */,
 			);
 			path = CardView;
 			sourceTree = "<group>";
@@ -221,6 +234,7 @@
 				F6ADAFA629D1FC9C00AE1C2C /* Movie.swift */,
 				F611F4AC29D2EDC8003D4ACB /* DishCategory.swift */,
 				F611F4B729D3217F003D4ACB /* TimeCategory.swift */,
+				F611F50029D45B37003D4ACB /* ChartData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -271,6 +285,7 @@
 			name = sensorApp;
 			packageProductDependencies = (
 				F611F4AA29D2ED9E003D4ACB /* Kingfisher */,
+				F611F4F029D44181003D4ACB /* Charts */,
 			);
 			productName = sensorApp;
 			productReference = F6ADAF6929D1F92000AE1C2C /* sensorApp.app */;
@@ -346,6 +361,7 @@
 			mainGroup = F6ADAF6029D1F92000AE1C2C;
 			packageReferences = (
 				F611F4A929D2ED9E003D4ACB /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				F611F4EF29D44181003D4ACB /* XCRemoteSwiftPackageReference "Charts" */,
 			);
 			productRefGroup = F6ADAF6A29D1F92000AE1C2C /* Products */;
 			projectDirPath = "";
@@ -363,6 +379,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F611F4FF29D4573A003D4ACB /* LineChartsCollectionViewCell.xib in Resources */,
 				F611F4BD29D32316003D4ACB /* TimeCategoryCollectionViewCell.xib in Resources */,
 				F611F4A829D2ED2D003D4ACB /* CategoryCollectionViewCell.xib in Resources */,
 				F6ADAF7929D1F92100AE1C2C /* LaunchScreen.storyboard in Resources */,
@@ -398,10 +415,13 @@
 				F6ADAF6D29D1F92000AE1C2C /* AppDelegate.swift in Sources */,
 				F6ADAFAD29D2394600AE1C2C /* ReportViewController.swift in Sources */,
 				F611F4B429D2EE6F003D4ACB /* CardView.swift in Sources */,
+				F611F50129D45B37003D4ACB /* ChartData.swift in Sources */,
 				F611F4AD29D2EDC8003D4ACB /* DishCategory.swift in Sources */,
 				F6ADAFA729D1FC9C00AE1C2C /* Movie.swift in Sources */,
 				F6ADAFA229D1FC5700AE1C2C /* MovieCollectionViewCell.swift in Sources */,
+				F611F4F329D44368003D4ACB /* GraphView.swift in Sources */,
 				F611F4A729D2ED2D003D4ACB /* CategoryCollectionViewCell.swift in Sources */,
+				F611F4FE29D4573A003D4ACB /* LineChartsCollectionViewCell.swift in Sources */,
 				F611F4BC29D32316003D4ACB /* TimeCategoryCollectionViewCell.swift in Sources */,
 				F611F4B829D3217F003D4ACB /* TimeCategory.swift in Sources */,
 				F6ADAF6F29D1F92000AE1C2C /* SceneDelegate.swift in Sources */,
@@ -756,6 +776,14 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		F611F4EF29D44181003D4ACB /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -763,6 +791,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F611F4A929D2ED9E003D4ACB /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		F611F4F029D44181003D4ACB /* Charts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F611F4EF29D44181003D4ACB /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = Charts;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

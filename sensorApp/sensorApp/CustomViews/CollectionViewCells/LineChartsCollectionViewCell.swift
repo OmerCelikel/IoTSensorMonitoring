@@ -15,14 +15,16 @@ class LineChartsCollectionViewCell: UICollectionViewCell {
     
     var dataEntries = [ChartDataEntry]()
     func setup(with chart: ChartData) {
+        
         for point in chart.dataEntries {
             let entry = ChartDataEntry(x: point.x, y: point.y)
             dataEntries.append(entry)
         }
-//        gasNameTextLabel.text = chart.name
+        gasNameTextLabel.text = chart.name
         
         // Create a LineChartDataSet from the data entries
-        let dataSet = LineChartDataSet(entries: dataEntries, label: "Random Data")
+        let dataSet = LineChartDataSet(entries: dataEntries, label: "")
+        dataSet.setColor(UIColor.clear)
         let lineColor = UIColor(red: 237/255, green: 111/255, blue: 128/255, alpha: 1)
         dataSet.colors = [lineColor]
 //        dataSet.colors = [NSUIColor.systemBlue.withAlphaComponent(1)]
@@ -37,9 +39,6 @@ class LineChartsCollectionViewCell: UICollectionViewCell {
         
         // Configure the line chart to use cubic interpolation and add a shadow
         dataSet.mode = .cubicBezier
-        //        dataSet.drawFilledEnabled = true
-        //        dataSet.fillColor = NSUIColor.blue.withAlphaComponent(0.3)
-        //        dataSet.fillAlpha = 1.0
         
         dataSet.drawCirclesEnabled = false
         // Remove x-axis from top and show labels only on the bottom
@@ -48,9 +47,15 @@ class LineChartsCollectionViewCell: UICollectionViewCell {
         
         // Remove y-axis from right and show labels only on the left
         lineChartView.rightAxis.enabled = false
+        lineChartView.leftAxis.enabled = false
         
         // Create a LineChartData object from the LineChartDataSet
         let chartData = LineChartData(dataSet: dataSet)
+        
+        lineChartView.xAxis.drawLabelsEnabled = false
+        lineChartView.leftAxis.drawLabelsEnabled = false
+
+        lineChartView.leftAxis.gridColor = UIColor.white
         
         // Set the data property of the LineChartView to the LineChartData
         lineChartView.data = chartData

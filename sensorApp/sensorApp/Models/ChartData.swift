@@ -74,7 +74,6 @@ let chartData: [ChartData] = [
                 ChartDataEntry(x: 9, y: 4.9),
                 ChartDataEntry(x: 10, y: 4.8)
             ]),
-    
 ]
     
     

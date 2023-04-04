@@ -18,8 +18,11 @@ class ViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.collectionViewLayout = UICollectionViewFlowLayout()
+        
+        // Register collection view cell
+        collectionView.register(UINib(nibName: "LineChartsCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "LineChartsCollectionViewCell")
     }
-
+    
 }
 
 extension ViewController: UICollectionViewDataSource {
@@ -28,8 +31,7 @@ extension ViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MovieCollectionViewCell", for: indexPath) as! MovieCollectionViewCell
+
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "LineChartsCollectionViewCell", for: indexPath) as! LineChartsCollectionViewCell
         print("-> \(chartData[indexPath.row])")
         cell.setup(with: chartData[indexPath.row])
@@ -48,7 +50,7 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
                 } else {
                     // Set default size for all other items
                     let width = (collectionView.bounds.width - 10) / 2
-                    return CGSize(width: width, height: 200)
+                    return CGSize(width: width, height: 250)
                 }
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

@@ -22,6 +22,7 @@
 		F611F4FE29D4573A003D4ACB /* LineChartsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F611F4FC29D4573A003D4ACB /* LineChartsCollectionViewCell.swift */; };
 		F611F4FF29D4573A003D4ACB /* LineChartsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F611F4FD29D4573A003D4ACB /* LineChartsCollectionViewCell.xib */; };
 		F611F50129D45B37003D4ACB /* ChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F611F50029D45B37003D4ACB /* ChartData.swift */; };
+		F69EB4A029DCA502003D340D /* LineChartDataSetCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69EB49F29DCA502003D340D /* LineChartDataSetCreator.swift */; };
 		F6ADAF6D29D1F92000AE1C2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ADAF6C29D1F92000AE1C2C /* AppDelegate.swift */; };
 		F6ADAF6F29D1F92000AE1C2C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ADAF6E29D1F92000AE1C2C /* SceneDelegate.swift */; };
 		F6ADAF7129D1F92000AE1C2C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ADAF7029D1F92000AE1C2C /* ViewController.swift */; };
@@ -67,6 +68,7 @@
 		F611F4FC29D4573A003D4ACB /* LineChartsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartsCollectionViewCell.swift; sourceTree = "<group>"; };
 		F611F4FD29D4573A003D4ACB /* LineChartsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LineChartsCollectionViewCell.xib; sourceTree = "<group>"; };
 		F611F50029D45B37003D4ACB /* ChartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartData.swift; sourceTree = "<group>"; };
+		F69EB49F29DCA502003D340D /* LineChartDataSetCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartDataSetCreator.swift; sourceTree = "<group>"; };
 		F6ADAF6929D1F92000AE1C2C /* sensorApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sensorApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6ADAF6C29D1F92000AE1C2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6ADAF6E29D1F92000AE1C2C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 		F611F4A229D2ECC6003D4ACB /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				F69EB49E29DCA4EE003D340D /* LineChartHome */,
 				F611F4B229D2EE68003D4ACB /* CardView */,
 				F611F4A329D2ECD0003D4ACB /* CollectionViewCells */,
 			);
@@ -176,6 +179,14 @@
 				F611F4BB29D32316003D4ACB /* TimeCategoryCollectionViewCell.xib */,
 			);
 			path = TimeCategoryViewCell;
+			sourceTree = "<group>";
+		};
+		F69EB49E29DCA4EE003D340D /* LineChartHome */ = {
+			isa = PBXGroup;
+			children = (
+				F69EB49F29DCA502003D340D /* LineChartDataSetCreator.swift */,
+			);
+			path = LineChartHome;
 			sourceTree = "<group>";
 		};
 		F6ADAF6029D1F92000AE1C2C = {
@@ -414,6 +425,7 @@
 				F611F4B129D2EE43003D4ACB /* String+Extension.swift in Sources */,
 				F6ADAF6D29D1F92000AE1C2C /* AppDelegate.swift in Sources */,
 				F6ADAFAD29D2394600AE1C2C /* ReportViewController.swift in Sources */,
+				F69EB4A029DCA502003D340D /* LineChartDataSetCreator.swift in Sources */,
 				F611F4B429D2EE6F003D4ACB /* CardView.swift in Sources */,
 				F611F50129D45B37003D4ACB /* ChartData.swift in Sources */,
 				F611F4AD29D2EDC8003D4ACB /* DishCategory.swift in Sources */,

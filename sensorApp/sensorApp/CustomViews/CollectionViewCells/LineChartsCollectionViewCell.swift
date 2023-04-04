@@ -23,7 +23,9 @@ class LineChartsCollectionViewCell: UICollectionViewCell {
         
         // Create a LineChartDataSet from the data entries
         let dataSet = LineChartDataSet(entries: dataEntries, label: "Random Data")
-        dataSet.colors = [NSUIColor.systemBlue.withAlphaComponent(1)]
+        let lineColor = UIColor(red: 237/255, green: 111/255, blue: 128/255, alpha: 1)
+        dataSet.colors = [lineColor]
+//        dataSet.colors = [NSUIColor.systemBlue.withAlphaComponent(1)]
         dataSet.lineWidth = 2.0
         dataSet.drawValuesEnabled = false
         
@@ -47,13 +49,12 @@ class LineChartsCollectionViewCell: UICollectionViewCell {
         // Remove y-axis from right and show labels only on the left
         lineChartView.rightAxis.enabled = false
         
-        
-        
         // Create a LineChartData object from the LineChartDataSet
         let chartData = LineChartData(dataSet: dataSet)
         
         // Set the data property of the LineChartView to the LineChartData
         lineChartView.data = chartData
+        lineChartView.animate(xAxisDuration: 1.5)
     }
 
 }

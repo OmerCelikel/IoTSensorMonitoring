@@ -56,6 +56,8 @@ class LineChartsCollectionViewCell: UICollectionViewCell {
         lineChartView.leftAxis.drawLabelsEnabled = false
 
         lineChartView.leftAxis.gridColor = UIColor.white
+        lineChartView.legend.enabled = false
+
         
         // Set the data property of the LineChartView to the LineChartData
         lineChartView.data = chartData

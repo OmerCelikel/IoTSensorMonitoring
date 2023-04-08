@@ -48,14 +48,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Real - Time Monitoring" id="0Le-jW-Ld8">
-                        <barButtonItem key="rightBarButtonItem" title="Item" style="plain" id="qCG-nF-AOm">
-                            <connections>
-                                <segue destination="Mxp-eb-8HZ" kind="show" id="F2V-Mz-dyL"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" style="plain" id="qCG-nF-AOm"/>
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="e13-G6-2f9" id="Ddd-TD-PkW"/>
+                        <segue destination="Mxp-eb-8HZ" kind="show" identifier="showReport" id="BzL-Id-05I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -65,7 +62,7 @@
         <!--Report View Controller-->
         <scene sceneID="lem-qg-67F">
             <objects>
-                <viewController id="Mxp-eb-8HZ" customClass="ReportViewController" customModule="sensorApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ReportViewController" id="Mxp-eb-8HZ" customClass="ReportViewController" customModule="sensorApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qmI-7A-r0Y">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

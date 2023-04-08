@@ -258,7 +258,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="HxB-RH-eZt"/>
                     <connections>
-                        <outlet property="gaugaView" destination="R2V-gR-AdT" id="r5T-3S-OK0"/>
+                        <outlet property="gaugeView" destination="R2V-gR-AdT" id="4Vg-Ct-LTo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YsQ-8e-GDQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

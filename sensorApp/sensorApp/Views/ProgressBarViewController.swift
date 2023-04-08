@@ -13,7 +13,9 @@ class ProgressBarViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        gaugeView.value = 31.1
+        gaugeView.startAnimation()
+        gaugeView.value = 55.1
+        
     }
 
 

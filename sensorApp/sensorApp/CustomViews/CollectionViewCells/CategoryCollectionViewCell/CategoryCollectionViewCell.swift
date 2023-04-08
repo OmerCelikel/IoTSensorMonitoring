@@ -15,7 +15,7 @@ class CategoryCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var categoryImageView: UIImageView!
     @IBOutlet weak var categoryTitleLbl: UILabel!
     
-    func setup(category: DishCategory) {
+    func setup(category: GasCategory) {
         categoryTitleLbl.text = category.name
         categoryImageView.kf.setImage(with: category.image?.asUrl)
     }

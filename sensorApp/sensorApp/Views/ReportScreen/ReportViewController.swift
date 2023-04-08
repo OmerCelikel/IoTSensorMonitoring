@@ -14,7 +14,7 @@ class ReportViewController: UIViewController {
     @IBOutlet weak var timeCollectionView: UICollectionView!
     @IBOutlet weak var lineChartView: LineChartView!
 
-    var categories: [DishCategory] = [
+    var categories: [GasCategory] = [
         .init(id: "id1", name: "Temperature", image: "https://picsum.photos/100/200"),
         .init(id: "id2", name: "CO2", image: "https://picsum.photos/100/200"),
         .init(id: "id3", name: "CO", image: "https://picsum.photos/100/200"),
@@ -90,6 +90,7 @@ class ReportViewController: UIViewController {
         
         // Set the data property of the LineChartView to the LineChartData
         lineChartView.data = chartData
+        lineChartView.animate(xAxisDuration: 1.5)
     }
 
 }

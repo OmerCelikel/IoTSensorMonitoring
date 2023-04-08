@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         // Register collection view cell
         collectionView.register(UINib(nibName: "LineChartsCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "LineChartsCollectionViewCell")
         
-        collectionView.register(UINib(nibName: "PieChartCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "PieChartCollectionViewCell")
+        collectionView.register(UINib(nibName: "GaugeCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "GaugeCollectionViewCell")
     }
     
 }
@@ -47,10 +47,9 @@ extension ViewController: UICollectionViewDataSource {
 //        return cell
         
         if indexPath.row == 0 {
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PieChartCollectionViewCell", for: indexPath) as! PieChartCollectionViewCell
-                let chartData = chartData[indexPath.row]
-                
-                cell.setup(with: temperatureDataEntries)
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GaugeCollectionViewCell", for: indexPath) as! GaugeCollectionViewCell
+            
+            cell.setup(with: TemperatureData.init(temperature: 20))
                 return cell
             } else {
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "LineChartsCollectionViewCell", for: indexPath) as! LineChartsCollectionViewCell

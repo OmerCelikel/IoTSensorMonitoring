@@ -36,7 +36,7 @@ extension ViewController: UICollectionViewDataSource {
         if indexPath.row == 0 {
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GaugeCollectionViewCell", for: indexPath) as! GaugeCollectionViewCell
             
-            cell.setup(with: TemperatureData.init(temperature: 20))
+            cell.setup(with: TemperatureData.init(temperature: 30))
                 return cell
             } else {
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "LineChartsCollectionViewCell", for: indexPath) as! LineChartsCollectionViewCell

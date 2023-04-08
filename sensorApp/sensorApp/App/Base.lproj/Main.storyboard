@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2ug-g3-Lrh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fFT-Lc-S6L">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
@@ -50,7 +50,7 @@
                     <navigationItem key="navigationItem" title="Real - Time Monitoring" id="0Le-jW-Ld8">
                         <barButtonItem key="rightBarButtonItem" title="Item" style="plain" id="qCG-nF-AOm">
                             <connections>
-                                <segue destination="fFT-Lc-S6L" kind="show" id="i97-qP-pp5"/>
+                                <segue destination="Mxp-eb-8HZ" kind="show" id="F2V-Mz-dyL"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -71,7 +71,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AHn-XT-KYC">
-                                <rect key="frame" x="0.0" y="47" width="390" height="763"/>
+                                <rect key="frame" x="0.0" y="91" width="390" height="719"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="PeA-Y8-F0L">
                                         <rect key="frame" x="0.0" y="0.0" width="390" height="620"/>
@@ -240,25 +240,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xnn-bT-Tc2" customClass="ProgressBarView" customModule="sensorApp" customModuleProvider="target">
-                                <rect key="frame" x="55" y="282" width="280" height="280"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R2V-gR-AdT" customClass="GaugeView" customModule="sensorApp" customModuleProvider="target">
+                                <rect key="frame" x="75" y="302" width="240" height="240"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="280" id="Gy9-Cw-2eZ"/>
-                                    <constraint firstAttribute="height" constant="280" id="K5R-jk-nyw"/>
+                                    <constraint firstAttribute="height" constant="240" id="0oy-K8-zbh"/>
+                                    <constraint firstAttribute="width" constant="240" id="pu8-VE-HQ4"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="69b-oV-1bK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Xnn-bT-Tc2" firstAttribute="centerX" secondItem="05i-Tq-rMu" secondAttribute="centerX" id="Q7Z-G9-EOL"/>
-                            <constraint firstItem="Xnn-bT-Tc2" firstAttribute="centerY" secondItem="05i-Tq-rMu" secondAttribute="centerY" id="Uco-4i-gCa"/>
+                            <constraint firstItem="R2V-gR-AdT" firstAttribute="centerY" secondItem="05i-Tq-rMu" secondAttribute="centerY" id="KuJ-V8-0y5"/>
+                            <constraint firstItem="R2V-gR-AdT" firstAttribute="centerX" secondItem="05i-Tq-rMu" secondAttribute="centerX" id="v7s-CU-t4e"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HxB-RH-eZt"/>
                     <connections>
-                        <outlet property="progressBarView" destination="Xnn-bT-Tc2" id="gQM-5e-usm"/>
+                        <outlet property="gaugaView" destination="R2V-gR-AdT" id="r5T-3S-OK0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YsQ-8e-GDQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

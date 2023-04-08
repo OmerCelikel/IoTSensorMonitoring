@@ -22,6 +22,7 @@
 		F611F4FE29D4573A003D4ACB /* LineChartsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F611F4FC29D4573A003D4ACB /* LineChartsCollectionViewCell.swift */; };
 		F611F4FF29D4573A003D4ACB /* LineChartsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F611F4FD29D4573A003D4ACB /* LineChartsCollectionViewCell.xib */; };
 		F611F50129D45B37003D4ACB /* ChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F611F50029D45B37003D4ACB /* ChartData.swift */; };
+		F6447D4729DEAFAB0094C466 /* GaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6447D4629DEAFAB0094C466 /* GaugeView.swift */; };
 		F69EB4A029DCA502003D340D /* LineChartDataSetCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69EB49F29DCA502003D340D /* LineChartDataSetCreator.swift */; };
 		F69EB4A529DCC216003D340D /* PieChartCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69EB4A329DCC216003D340D /* PieChartCollectionViewCell.swift */; };
 		F69EB4A629DCC216003D340D /* PieChartCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F69EB4A429DCC216003D340D /* PieChartCollectionViewCell.xib */; };
@@ -73,6 +74,7 @@
 		F611F4FC29D4573A003D4ACB /* LineChartsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartsCollectionViewCell.swift; sourceTree = "<group>"; };
 		F611F4FD29D4573A003D4ACB /* LineChartsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LineChartsCollectionViewCell.xib; sourceTree = "<group>"; };
 		F611F50029D45B37003D4ACB /* ChartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartData.swift; sourceTree = "<group>"; };
+		F6447D4629DEAFAB0094C466 /* GaugeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugeView.swift; sourceTree = "<group>"; };
 		F69EB49F29DCA502003D340D /* LineChartDataSetCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartDataSetCreator.swift; sourceTree = "<group>"; };
 		F69EB4A329DCC216003D340D /* PieChartCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartCollectionViewCell.swift; sourceTree = "<group>"; };
 		F69EB4A429DCC216003D340D /* PieChartCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PieChartCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				F611F4A329D2ECD0003D4ACB /* CollectionViewCells */,
 				F69EB4A929DCC881003D340D /* ProgressBarView.swift */,
 				F69EB4AB29DCCA82003D340D /* SpeedometerProgressView.swift */,
+				F6447D4629DEAFAB0094C466 /* GaugeView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -460,6 +463,7 @@
 				F6ADAF6D29D1F92000AE1C2C /* AppDelegate.swift in Sources */,
 				F69EB4A529DCC216003D340D /* PieChartCollectionViewCell.swift in Sources */,
 				F6ADAFAD29D2394600AE1C2C /* ReportViewController.swift in Sources */,
+				F6447D4729DEAFAB0094C466 /* GaugeView.swift in Sources */,
 				F69EB4A029DCA502003D340D /* LineChartDataSetCreator.swift in Sources */,
 				F611F4B429D2EE6F003D4ACB /* CardView.swift in Sources */,
 				F69EB4AA29DCC881003D340D /* ProgressBarView.swift in Sources */,

@@ -8,15 +8,12 @@
 import UIKit
 
 class ProgressBarViewController: UIViewController {
-
-    @IBOutlet weak var progressBarView: ProgressBarView!
+    
+    @IBOutlet weak var gaugaView: GaugeView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let progressBarView = progressBarView {
-            progressBarView.progress = 1
-        }
-
+        gaugaView.value = 0
     }
 
 

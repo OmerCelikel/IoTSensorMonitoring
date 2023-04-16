@@ -10,6 +10,9 @@ import Charts
 
 class ViewController: UIViewController {
     
+//    var service: GasServiceProtocol = GasService()
+    let service = AFGasService()
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
@@ -23,6 +26,27 @@ class ViewController: UIViewController {
         collectionView.register(UINib(nibName: "LineChartsCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "LineChartsCollectionViewCell")
         
         collectionView.register(UINib(nibName: "GaugeCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "GaugeCollectionViewCell")
+
+        
+        service.getAllGases { result in
+            switch result {
+            case .success(let gases):
+                print(gases)
+            case .failure(let error):
+                print(error)
+            }
+        }
+        
+        service.postReport(date: "-1m", field: "DHT22_Temperature") { result in
+            switch result {
+            case .success(let reports):
+                print(reports)
+            case .failure(let error):
+                print(error)
+            }
+        }
+
+
     }
 }
 

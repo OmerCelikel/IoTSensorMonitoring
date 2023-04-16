@@ -26,6 +26,7 @@
 		F69EB4A529DCC216003D340D /* GaugeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69EB4A329DCC216003D340D /* GaugeCollectionViewCell.swift */; };
 		F69EB4A629DCC216003D340D /* GaugeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F69EB4A429DCC216003D340D /* GaugeCollectionViewCell.xib */; };
 		F69EB4A829DCC832003D340D /* ProgressBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69EB4A729DCC832003D340D /* ProgressBarViewController.swift */; };
+		F6A4FA8C29E5DCF7007BD564 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = F6A4FA8B29E5DCF7007BD564 /* Alamofire */; };
 		F6ADAF6D29D1F92000AE1C2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ADAF6C29D1F92000AE1C2C /* AppDelegate.swift */; };
 		F6ADAF6F29D1F92000AE1C2C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ADAF6E29D1F92000AE1C2C /* SceneDelegate.swift */; };
 		F6ADAF7129D1F92000AE1C2C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ADAF7029D1F92000AE1C2C /* ViewController.swift */; };
@@ -38,6 +39,17 @@
 		F6ADAFAD29D2394600AE1C2C /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ADAFAC29D2394600AE1C2C /* ReportViewController.swift */; };
 		F6E0998329E1A90F002D4809 /* TemperatureData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E0998229E1A90F002D4809 /* TemperatureData.swift */; };
 		F6E0998B29E1AE0F002D4809 /* GasCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E0998A29E1AE0F002D4809 /* GasCategory.swift */; };
+		F6E799F829EBDFAB0047C93D /* SensorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E799F729EBDFAB0047C93D /* SensorData.swift */; };
+		F6E799FA29EBE0570047C93D /* RealTimeGasRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E799F929EBE0570047C93D /* RealTimeGasRequest.swift */; };
+		F6E799FC29EBE0B70047C93D /* RealTimeGasResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E799FB29EBE0B70047C93D /* RealTimeGasResponse.swift */; };
+		F6E799FE29EBE2260047C93D /* RealTimeAllGasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E799FD29EBE2260047C93D /* RealTimeAllGasses.swift */; };
+		F6E79A0129EBE2C00047C93D /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E79A0029EBE2C00047C93D /* Network.swift */; };
+		F6E79A0329EBE2D40047C93D /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E79A0229EBE2D40047C93D /* Requestable.swift */; };
+		F6E79A0529EBE2E50047C93D /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E79A0429EBE2E50047C93D /* HTTPMethod.swift */; };
+		F6E79A0729EBE2F70047C93D /* ParameterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E79A0629EBE2F70047C93D /* ParameterType.swift */; };
+		F6E79A0A29EBE34D0047C93D /* GasService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E79A0929EBE34D0047C93D /* GasService.swift */; };
+		F6E79A0C29EBE35C0047C93D /* GasRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E79A0B29EBE35C0047C93D /* GasRequest.swift */; };
+		F6E79A0E29EBED1A0047C93D /* AFService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E79A0D29EBED190047C93D /* AFService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +103,17 @@
 		F6ADAFAC29D2394600AE1C2C /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
 		F6E0998229E1A90F002D4809 /* TemperatureData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureData.swift; sourceTree = "<group>"; };
 		F6E0998A29E1AE0F002D4809 /* GasCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasCategory.swift; sourceTree = "<group>"; };
+		F6E799F729EBDFAB0047C93D /* SensorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorData.swift; sourceTree = "<group>"; };
+		F6E799F929EBE0570047C93D /* RealTimeGasRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTimeGasRequest.swift; sourceTree = "<group>"; };
+		F6E799FB29EBE0B70047C93D /* RealTimeGasResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTimeGasResponse.swift; sourceTree = "<group>"; };
+		F6E799FD29EBE2260047C93D /* RealTimeAllGasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTimeAllGasses.swift; sourceTree = "<group>"; };
+		F6E79A0029EBE2C00047C93D /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		F6E79A0229EBE2D40047C93D /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
+		F6E79A0429EBE2E50047C93D /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		F6E79A0629EBE2F70047C93D /* ParameterType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterType.swift; sourceTree = "<group>"; };
+		F6E79A0929EBE34D0047C93D /* GasService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasService.swift; sourceTree = "<group>"; };
+		F6E79A0B29EBE35C0047C93D /* GasRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasRequest.swift; sourceTree = "<group>"; };
+		F6E79A0D29EBED190047C93D /* AFService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6A4FA8C29E5DCF7007BD564 /* Alamofire in Frameworks */,
 				F611F4AB29D2ED9E003D4ACB /* Kingfisher in Frameworks */,
 				F611F4F129D44181003D4ACB /* Charts in Frameworks */,
 			);
@@ -237,6 +261,7 @@
 		F6ADAF6B29D1F92000AE1C2C /* sensorApp */ = {
 			isa = PBXGroup;
 			children = (
+				F6E799F529EBDF750047C93D /* Network */,
 				F611F4AF29D2EE2F003D4ACB /* Extensions */,
 				F6ADAFAB29D2391B00AE1C2C /* App */,
 				F611F4AE29D2EE05003D4ACB /* Views */,
@@ -311,6 +336,48 @@
 			path = GaugeView;
 			sourceTree = "<group>";
 		};
+		F6E799F529EBDF750047C93D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F6E79A0829EBE33F0047C93D /* Services */,
+				F6E799FF29EBE2B60047C93D /* Core */,
+				F6E799F629EBDF8D0047C93D /* Model */,
+				F6E79A0D29EBED190047C93D /* AFService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		F6E799F629EBDF8D0047C93D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F6E799F729EBDFAB0047C93D /* SensorData.swift */,
+				F6E799F929EBE0570047C93D /* RealTimeGasRequest.swift */,
+				F6E799FB29EBE0B70047C93D /* RealTimeGasResponse.swift */,
+				F6E799FD29EBE2260047C93D /* RealTimeAllGasses.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F6E799FF29EBE2B60047C93D /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				F6E79A0029EBE2C00047C93D /* Network.swift */,
+				F6E79A0229EBE2D40047C93D /* Requestable.swift */,
+				F6E79A0429EBE2E50047C93D /* HTTPMethod.swift */,
+				F6E79A0629EBE2F70047C93D /* ParameterType.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		F6E79A0829EBE33F0047C93D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F6E79A0929EBE34D0047C93D /* GasService.swift */,
+				F6E79A0B29EBE35C0047C93D /* GasRequest.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -330,6 +397,7 @@
 			packageProductDependencies = (
 				F611F4AA29D2ED9E003D4ACB /* Kingfisher */,
 				F611F4F029D44181003D4ACB /* Charts */,
+				F6A4FA8B29E5DCF7007BD564 /* Alamofire */,
 			);
 			productName = sensorApp;
 			productReference = F6ADAF6929D1F92000AE1C2C /* sensorApp.app */;
@@ -406,6 +474,7 @@
 			packageReferences = (
 				F611F4A929D2ED9E003D4ACB /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				F611F4EF29D44181003D4ACB /* XCRemoteSwiftPackageReference "Charts" */,
+				F6A4FA8A29E5DCF7007BD564 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = F6ADAF6A29D1F92000AE1C2C /* Products */;
 			projectDirPath = "";
@@ -456,23 +525,34 @@
 			files = (
 				F611F4B629D2EE9F003D4ACB /* UIView+Extension.swift in Sources */,
 				F69EB4A829DCC832003D340D /* ProgressBarViewController.swift in Sources */,
+				F6E79A0129EBE2C00047C93D /* Network.swift in Sources */,
 				F6ADAF7129D1F92000AE1C2C /* ViewController.swift in Sources */,
+				F6E799FA29EBE0570047C93D /* RealTimeGasRequest.swift in Sources */,
+				F6E79A0729EBE2F70047C93D /* ParameterType.swift in Sources */,
+				F6E799F829EBDFAB0047C93D /* SensorData.swift in Sources */,
 				F611F4B129D2EE43003D4ACB /* String+Extension.swift in Sources */,
 				F6ADAF6D29D1F92000AE1C2C /* AppDelegate.swift in Sources */,
 				F69EB4A529DCC216003D340D /* GaugeCollectionViewCell.swift in Sources */,
 				F6ADAFAD29D2394600AE1C2C /* ReportViewController.swift in Sources */,
+				F6E79A0529EBE2E50047C93D /* HTTPMethod.swift in Sources */,
+				F6E79A0329EBE2D40047C93D /* Requestable.swift in Sources */,
+				F6E799FC29EBE0B70047C93D /* RealTimeGasResponse.swift in Sources */,
 				F6447D4729DEAFAB0094C466 /* GaugeView.swift in Sources */,
 				F69EB4A029DCA502003D340D /* LineChartDataSetCreator.swift in Sources */,
 				F611F4B429D2EE6F003D4ACB /* CardView.swift in Sources */,
 				F611F50129D45B37003D4ACB /* ChartData.swift in Sources */,
 				F6E0998329E1A90F002D4809 /* TemperatureData.swift in Sources */,
+				F6E79A0C29EBE35C0047C93D /* GasRequest.swift in Sources */,
 				F611F4F329D44368003D4ACB /* GraphView.swift in Sources */,
 				F6E0998B29E1AE0F002D4809 /* GasCategory.swift in Sources */,
 				F611F4A729D2ED2D003D4ACB /* CategoryCollectionViewCell.swift in Sources */,
 				F611F4FE29D4573A003D4ACB /* LineChartsCollectionViewCell.swift in Sources */,
+				F6E79A0E29EBED1A0047C93D /* AFService.swift in Sources */,
+				F6E799FE29EBE2260047C93D /* RealTimeAllGasses.swift in Sources */,
 				F611F4BC29D32316003D4ACB /* TimeCategoryCollectionViewCell.swift in Sources */,
 				F611F4B829D3217F003D4ACB /* TimeCategory.swift in Sources */,
 				F6ADAF6F29D1F92000AE1C2C /* SceneDelegate.swift in Sources */,
+				F6E79A0A29EBE34D0047C93D /* GasService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -832,6 +912,14 @@
 				kind = branch;
 			};
 		};
+		F6A4FA8A29E5DCF7007BD564 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -844,6 +932,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F611F4EF29D44181003D4ACB /* XCRemoteSwiftPackageReference "Charts" */;
 			productName = Charts;
+		};
+		F6A4FA8B29E5DCF7007BD564 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F6A4FA8A29E5DCF7007BD564 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

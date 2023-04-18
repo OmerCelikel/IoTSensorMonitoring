@@ -23,8 +23,11 @@ struct ReportModel: Codable {
 
 
 class AFGasService {
+    
+    private let baseURL = "http://127.0.0.1:5000"
+    
     func getAllGases(completion: @escaping (Result<[Gas], Error>) -> Void) {
-        AF.request("http://127.0.0.1:5000/values").validate().responseDecodable(of: [Gas].self) { response in
+        AF.request("\(baseURL)/values").validate().responseDecodable(of: [Gas].self) { response in
             switch response.result {
             case .success(let gases):
                 completion(.success(gases))
@@ -35,7 +38,7 @@ class AFGasService {
     }
     
     func postReport(date: String, field: String, completion: @escaping (Result<[ReportModel], AFError>) -> Void) {
-        let url = "http://127.0.0.1:5000/reports"
+        let url = "\(baseURL)/reports"
         let parameters: [String: Any] = ["Date": date, "Field": field]
         
         AF.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default).validate().responseDecodable(of: [ReportModel].self) { response in

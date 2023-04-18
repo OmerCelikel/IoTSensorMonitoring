@@ -83,6 +83,7 @@
 		F611F4FD29D4573A003D4ACB /* LineChartsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LineChartsCollectionViewCell.xib; sourceTree = "<group>"; };
 		F611F50029D45B37003D4ACB /* ChartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartData.swift; sourceTree = "<group>"; };
 		F6447D4629DEAFAB0094C466 /* GaugeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugeView.swift; sourceTree = "<group>"; };
+		F65AB01E29EDAD58001C4E51 /* exampleData.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = exampleData.md; sourceTree = "<group>"; };
 		F69EB49F29DCA502003D340D /* LineChartDataSetCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartDataSetCreator.swift; sourceTree = "<group>"; };
 		F69EB4A329DCC216003D340D /* GaugeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugeCollectionViewCell.swift; sourceTree = "<group>"; };
 		F69EB4A429DCC216003D340D /* GaugeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GaugeCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -261,13 +262,14 @@
 		F6ADAF6B29D1F92000AE1C2C /* sensorApp */ = {
 			isa = PBXGroup;
 			children = (
+				F6ADAFAB29D2391B00AE1C2C /* App */,
 				F6E799F529EBDF750047C93D /* Network */,
 				F611F4AF29D2EE2F003D4ACB /* Extensions */,
-				F6ADAFAB29D2391B00AE1C2C /* App */,
 				F611F4AE29D2EE05003D4ACB /* Views */,
 				F611F4A229D2ECC6003D4ACB /* CustomViews */,
 				F6ADAFA329D1FC8700AE1C2C /* Models */,
 				F6ADAF7A29D1F92100AE1C2C /* Info.plist */,
+				F65AB01E29EDAD58001C4E51 /* exampleData.md */,
 			);
 			path = sensorApp;
 			sourceTree = "<group>";

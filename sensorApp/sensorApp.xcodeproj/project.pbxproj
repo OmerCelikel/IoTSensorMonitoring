@@ -21,6 +21,7 @@
 		F611F4FE29D4573A003D4ACB /* LineChartsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F611F4FC29D4573A003D4ACB /* LineChartsCollectionViewCell.swift */; };
 		F611F4FF29D4573A003D4ACB /* LineChartsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F611F4FD29D4573A003D4ACB /* LineChartsCollectionViewCell.xib */; };
 		F611F50129D45B37003D4ACB /* ChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F611F50029D45B37003D4ACB /* ChartData.swift */; };
+		F633208829F1919B00418B11 /* GasViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F633208729F1919B00418B11 /* GasViewModel.swift */; };
 		F6447D4729DEAFAB0094C466 /* GaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6447D4629DEAFAB0094C466 /* GaugeView.swift */; };
 		F69EB4A029DCA502003D340D /* LineChartDataSetCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69EB49F29DCA502003D340D /* LineChartDataSetCreator.swift */; };
 		F69EB4A529DCC216003D340D /* GaugeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69EB4A329DCC216003D340D /* GaugeCollectionViewCell.swift */; };
@@ -82,6 +83,7 @@
 		F611F4FC29D4573A003D4ACB /* LineChartsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartsCollectionViewCell.swift; sourceTree = "<group>"; };
 		F611F4FD29D4573A003D4ACB /* LineChartsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LineChartsCollectionViewCell.xib; sourceTree = "<group>"; };
 		F611F50029D45B37003D4ACB /* ChartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartData.swift; sourceTree = "<group>"; };
+		F633208729F1919B00418B11 /* GasViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasViewModel.swift; sourceTree = "<group>"; };
 		F6447D4629DEAFAB0094C466 /* GaugeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugeView.swift; sourceTree = "<group>"; };
 		F65AB01E29EDAD58001C4E51 /* exampleData.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = exampleData.md; sourceTree = "<group>"; };
 		F69EB49F29DCA502003D340D /* LineChartDataSetCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartDataSetCreator.swift; sourceTree = "<group>"; };
@@ -314,6 +316,7 @@
 			isa = PBXGroup;
 			children = (
 				F6ADAF7029D1F92000AE1C2C /* ViewController.swift */,
+				F633208729F1919B00418B11 /* GasViewModel.swift */,
 			);
 			path = HomeScreen;
 			sourceTree = "<group>";
@@ -530,6 +533,7 @@
 				F6E79A0129EBE2C00047C93D /* Network.swift in Sources */,
 				F6ADAF7129D1F92000AE1C2C /* ViewController.swift in Sources */,
 				F6E799FA29EBE0570047C93D /* RealTimeGasRequest.swift in Sources */,
+				F633208829F1919B00418B11 /* GasViewModel.swift in Sources */,
 				F6E79A0729EBE2F70047C93D /* ParameterType.swift in Sources */,
 				F6E799F829EBDFAB0047C93D /* SensorData.swift in Sources */,
 				F611F4B129D2EE43003D4ACB /* String+Extension.swift in Sources */,

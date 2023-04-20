@@ -9,9 +9,8 @@ import UIKit
 import Charts
 
 class ViewController: UIViewController {
-    
-//    var service: GasServiceProtocol = GasService()
-    let service = AFGasService()
+
+    let viewModel = GasViewModel()
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -28,23 +27,26 @@ class ViewController: UIViewController {
         collectionView.register(UINib(nibName: "GaugeCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "GaugeCollectionViewCell")
 
         
-        service.getAllGases { result in
+        viewModel.getAllGases { result in
             switch result {
-            case .success(let gases):
-                print(gases)
+            case.success(let gases):
+                DispatchQueue.main.async {
+                    //self.collectionView.reloadData()
+                    print(gases)
+                }
             case .failure(let error):
                 print(error)
             }
         }
         
-        service.postReport(date: "-1m", field: "DHT22_Temperature") { result in
-            switch result {
-            case .success(let reports):
-                print(reports)
-            case .failure(let error):
-                print(error)
-            }
-        }
+//        service.postReport(date: "-1m", field: "DHT22_Temperature") { result in
+//            switch result {
+//            case .success(let reports):
+//                print(reports)
+//            case .failure(let error):
+//                print(error)
+//            }
+//        }
 
 
     }

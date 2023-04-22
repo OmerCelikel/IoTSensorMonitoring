@@ -56,13 +56,15 @@ import UIKit
         colorPath.lineWidth = 15
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = bounds
-        gradientLayer.colors = [UIColor.blue.cgColor, UIColor.cyan.cgColor, UIColor.yellow.cgColor,  UIColor.red.cgColor]
-//        gradientLayer.colors = [UIColor.white.cgColor, UIColor.cyan.cgColor, UIColor.blue.cgColor]
+        let minColorGauge = UIColor(red: 2/255.0, green: 201/255.0, blue: 255/255.0, alpha: 1.0)
+        let maxColorGauge = UIColor(red: 147/255.0, green: 148/255.0, blue: 255/255.0, alpha: 1.0)
+        gradientLayer.colors = [UIColor.white.cgColor, minColorGauge.cgColor ,maxColorGauge.cgColor, UIColor.purple.cgColor]
+
         gradientLayer.startPoint = CGPoint(x: 0, y: 0.5)
         gradientLayer.endPoint = CGPoint(x: 1, y: 0.5)
         let shapeLayer = CAShapeLayer()
         shapeLayer.path = colorPath.cgPath
-        shapeLayer.lineWidth = 15
+        shapeLayer.lineWidth = 18
         shapeLayer.fillColor = nil
         shapeLayer.strokeColor = UIColor.black.cgColor
         shapeLayer.lineCap = .round
@@ -70,45 +72,29 @@ import UIKit
         layer.addSublayer(gradientLayer)
         
         // Draw the gray portion
-        //        let grayPath = UIBezierPath(arcCenter: center, radius: radius, startAngle: colorEndAngle, endAngle: endAngle, clockwise: true)
-        //        grayPath.lineWidth = 20
-        //        UIColor.lightGray.setStroke()
-        //        grayPath.stroke()
-        
-        // Draw the gray portion
         let grayStartAngle = colorEndAngle
         let grayEndAngle = endAngle
         let grayPath = UIBezierPath(arcCenter: center, radius: radius, startAngle: grayStartAngle, endAngle: grayEndAngle, clockwise: true)
-        grayPath.lineWidth = 15
+        grayPath.lineWidth = 18
         let lightGray = UIColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 0.6)
         lightGray.setStroke()
         grayPath.stroke()
-        
-        // Add circle layer inside the gauge
-        let circleLayer = CAShapeLayer()
-        let circlePath = UIBezierPath(arcCenter: center, radius: radius*0.8, startAngle: 0, endAngle: CGFloat.pi*2, clockwise: true)
-        circleLayer.path = circlePath.cgPath
-        circleLayer.fillColor = UIColor.white.cgColor
-        circleLayer.shadowColor = UIColor.black.cgColor
-        circleLayer.shadowOffset = CGSize(width: 0, height: 2)
-        circleLayer.shadowRadius = 1
-        circleLayer.shadowOpacity = 0.2
-        layer.addSublayer(circleLayer)
+    
         
         // Add label to the center of the gauge
-//        label.frame = CGRect(x: center.x - 50, y: center.y - 15, width: 100, height: 30)
-//        label.textAlignment = .center
-//        label.textColor = .black
-//        label.font = UIFont.systemFont(ofSize: 18)
-//        self.addSubview(label)
-//
-//
-//        let valueString = String(format: "%.1f °C", value)
-//        let font = UIFont.boldSystemFont(ofSize: 30)
-//        let attributes = [NSAttributedString.Key.font: font]
-//        let size = valueString.size(withAttributes: attributes)
-//        let point = CGPoint(x: center.x - size.width/2, y: center.y - size.height/2)
-//        valueString.draw(at: point, withAttributes: attributes)
+        label.frame = CGRect(x: center.x - 50, y: center.y - 15, width: 100, height: 30)
+        label.textAlignment = .center
+        label.textColor = .black
+        label.font = UIFont.systemFont(ofSize: 18)
+        self.addSubview(label)
+
+
+        let valueString = String(format: "%.1f °C", value)
+        let font = UIFont.boldSystemFont(ofSize: 30)
+        let attributes = [NSAttributedString.Key.font: font]
+        let size = valueString.size(withAttributes: attributes)
+        let point = CGPoint(x: center.x - size.width/2, y: center.y - size.height/2)
+        valueString.draw(at: point, withAttributes: attributes)
         
         
 

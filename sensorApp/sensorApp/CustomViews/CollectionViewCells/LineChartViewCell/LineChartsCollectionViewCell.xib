@@ -71,6 +71,7 @@
             <size key="customSize" width="234" height="250"/>
             <connections>
                 <outlet property="gasNameTextLabel" destination="5xI-Sb-Rmd" id="KAM-fx-EII"/>
+                <outlet property="gasValueTextLabel" destination="0DO-vw-sEu" id="z1H-Bo-hw5"/>
                 <outlet property="lineChartView" destination="e2d-QJ-j2S" id="G5H-vO-uIx"/>
             </connections>
             <point key="canvasLocation" x="58.46153846153846" y="90.995260663507111"/>

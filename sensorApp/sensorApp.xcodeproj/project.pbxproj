@@ -9,14 +9,12 @@
 /* Begin PBXBuildFile section */
 		F611F4A729D2ED2D003D4ACB /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F611F4A529D2ED2D003D4ACB /* CategoryCollectionViewCell.swift */; };
 		F611F4A829D2ED2D003D4ACB /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F611F4A629D2ED2D003D4ACB /* CategoryCollectionViewCell.xib */; };
-		F611F4AB29D2ED9E003D4ACB /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = F611F4AA29D2ED9E003D4ACB /* Kingfisher */; };
 		F611F4B129D2EE43003D4ACB /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F611F4B029D2EE43003D4ACB /* String+Extension.swift */; };
 		F611F4B429D2EE6F003D4ACB /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F611F4B329D2EE6F003D4ACB /* CardView.swift */; };
 		F611F4B629D2EE9F003D4ACB /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F611F4B529D2EE9F003D4ACB /* UIView+Extension.swift */; };
 		F611F4B829D3217F003D4ACB /* TimeCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F611F4B729D3217F003D4ACB /* TimeCategory.swift */; };
 		F611F4BC29D32316003D4ACB /* TimeCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F611F4BA29D32316003D4ACB /* TimeCategoryCollectionViewCell.swift */; };
 		F611F4BD29D32316003D4ACB /* TimeCategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F611F4BB29D32316003D4ACB /* TimeCategoryCollectionViewCell.xib */; };
-		F611F4F129D44181003D4ACB /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = F611F4F029D44181003D4ACB /* Charts */; };
 		F611F4F329D44368003D4ACB /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F611F4F229D44368003D4ACB /* GraphView.swift */; };
 		F611F4FE29D4573A003D4ACB /* LineChartsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F611F4FC29D4573A003D4ACB /* LineChartsCollectionViewCell.swift */; };
 		F611F4FF29D4573A003D4ACB /* LineChartsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F611F4FD29D4573A003D4ACB /* LineChartsCollectionViewCell.xib */; };
@@ -27,7 +25,6 @@
 		F69EB4A529DCC216003D340D /* GaugeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69EB4A329DCC216003D340D /* GaugeCollectionViewCell.swift */; };
 		F69EB4A629DCC216003D340D /* GaugeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F69EB4A429DCC216003D340D /* GaugeCollectionViewCell.xib */; };
 		F69EB4A829DCC832003D340D /* ProgressBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69EB4A729DCC832003D340D /* ProgressBarViewController.swift */; };
-		F6A4FA8C29E5DCF7007BD564 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = F6A4FA8B29E5DCF7007BD564 /* Alamofire */; };
 		F6ADAF6D29D1F92000AE1C2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ADAF6C29D1F92000AE1C2C /* AppDelegate.swift */; };
 		F6ADAF6F29D1F92000AE1C2C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ADAF6E29D1F92000AE1C2C /* SceneDelegate.swift */; };
 		F6ADAF7129D1F92000AE1C2C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ADAF7029D1F92000AE1C2C /* ViewController.swift */; };
@@ -38,6 +35,9 @@
 		F6ADAF8E29D1F92200AE1C2C /* sensorAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ADAF8D29D1F92200AE1C2C /* sensorAppUITests.swift */; };
 		F6ADAF9029D1F92200AE1C2C /* sensorAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ADAF8F29D1F92200AE1C2C /* sensorAppUITestsLaunchTests.swift */; };
 		F6ADAFAD29D2394600AE1C2C /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ADAFAC29D2394600AE1C2C /* ReportViewController.swift */; };
+		F6AEDC4029F41FF300F7A24B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = F6AEDC3F29F41FF300F7A24B /* Alamofire */; };
+		F6AEDC4B29F422EE00F7A24B /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = F6AEDC4A29F422EE00F7A24B /* Charts */; };
+		F6AEDC4E29F4234300F7A24B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = F6AEDC4D29F4234300F7A24B /* Kingfisher */; };
 		F6E0998329E1A90F002D4809 /* TemperatureData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E0998229E1A90F002D4809 /* TemperatureData.swift */; };
 		F6E0998B29E1AE0F002D4809 /* GasCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E0998A29E1AE0F002D4809 /* GasCategory.swift */; };
 		F6E799F829EBDFAB0047C93D /* SensorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E799F729EBDFAB0047C93D /* SensorData.swift */; };
@@ -125,9 +125,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6A4FA8C29E5DCF7007BD564 /* Alamofire in Frameworks */,
-				F611F4AB29D2ED9E003D4ACB /* Kingfisher in Frameworks */,
-				F611F4F129D44181003D4ACB /* Charts in Frameworks */,
+				F6AEDC4E29F4234300F7A24B /* Kingfisher in Frameworks */,
+				F6AEDC4029F41FF300F7A24B /* Alamofire in Frameworks */,
+				F6AEDC4B29F422EE00F7A24B /* Charts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,9 +402,9 @@
 			);
 			name = sensorApp;
 			packageProductDependencies = (
-				F611F4AA29D2ED9E003D4ACB /* Kingfisher */,
-				F611F4F029D44181003D4ACB /* Charts */,
-				F6A4FA8B29E5DCF7007BD564 /* Alamofire */,
+				F6AEDC3F29F41FF300F7A24B /* Alamofire */,
+				F6AEDC4A29F422EE00F7A24B /* Charts */,
+				F6AEDC4D29F4234300F7A24B /* Kingfisher */,
 			);
 			productName = sensorApp;
 			productReference = F6ADAF6929D1F92000AE1C2C /* sensorApp.app */;
@@ -479,9 +479,9 @@
 			);
 			mainGroup = F6ADAF6029D1F92000AE1C2C;
 			packageReferences = (
-				F611F4A929D2ED9E003D4ACB /* XCRemoteSwiftPackageReference "Kingfisher" */,
-				F611F4EF29D44181003D4ACB /* XCRemoteSwiftPackageReference "Charts" */,
-				F6A4FA8A29E5DCF7007BD564 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				F6AEDC3E29F41FF300F7A24B /* XCRemoteSwiftPackageReference "Alamofire" */,
+				F6AEDC4929F422EE00F7A24B /* XCRemoteSwiftPackageReference "Charts" */,
+				F6AEDC4C29F4234300F7A24B /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = F6ADAF6A29D1F92000AE1C2C /* Products */;
 			projectDirPath = "";
@@ -904,23 +904,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		F611F4A929D2ED9E003D4ACB /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 7.0.0;
-			};
-		};
-		F611F4EF29D44181003D4ACB /* XCRemoteSwiftPackageReference "Charts" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/danielgindi/Charts.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-		F6A4FA8A29E5DCF7007BD564 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		F6AEDC3E29F41FF300F7A24B /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -928,23 +912,39 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		F6AEDC4929F422EE00F7A24B /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.1.0;
+			};
+		};
+		F6AEDC4C29F4234300F7A24B /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		F611F4AA29D2ED9E003D4ACB /* Kingfisher */ = {
+		F6AEDC3F29F41FF300F7A24B /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = F611F4A929D2ED9E003D4ACB /* XCRemoteSwiftPackageReference "Kingfisher" */;
-			productName = Kingfisher;
+			package = F6AEDC3E29F41FF300F7A24B /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
-		F611F4F029D44181003D4ACB /* Charts */ = {
+		F6AEDC4A29F422EE00F7A24B /* Charts */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = F611F4EF29D44181003D4ACB /* XCRemoteSwiftPackageReference "Charts" */;
+			package = F6AEDC4929F422EE00F7A24B /* XCRemoteSwiftPackageReference "Charts" */;
 			productName = Charts;
 		};
-		F6A4FA8B29E5DCF7007BD564 /* Alamofire */ = {
+		F6AEDC4D29F4234300F7A24B /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = F6A4FA8A29E5DCF7007BD564 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
+			package = F6AEDC4C29F4234300F7A24B /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

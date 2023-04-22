@@ -55,11 +55,11 @@ class AFGasService {
         }
     }
     
-    func postReport(date: String, field: String, completion: @escaping (Result<[ReportModel], AFError>) -> Void) {
+    func postReport(date: String, field: String, completion: @escaping (Result<[Gas], AFError>) -> Void) {
         let url = "\(baseURL)/reports"
         let parameters: [String: Any] = ["Date": date, "Field": field]
         
-        AF.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default).validate().responseDecodable(of: [ReportModel].self) { response in
+        AF.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default).validate().responseDecodable(of: [Gas].self) { response in
             switch response.result {
             case .success(let reports):
                 completion(.success(reports))

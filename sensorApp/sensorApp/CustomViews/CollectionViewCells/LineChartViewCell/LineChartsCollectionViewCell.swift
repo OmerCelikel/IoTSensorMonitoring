@@ -69,7 +69,7 @@ class LineChartsCollectionViewCell: UICollectionViewCell {
     func setup2(with chart: Gas) {
         
         for point in 1...10 {
-            let entry = ChartDataEntry(x: chart.Value, y: Double(point) + 1.0)
+            let entry = ChartDataEntry(x: Double(point) + 1.0, y: chart.Value)
             dataEntries.append(entry)
         }
         gasNameTextLabel.text = chart.Name

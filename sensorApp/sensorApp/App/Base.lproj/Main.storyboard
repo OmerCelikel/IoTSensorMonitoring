@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2ug-g3-Lrh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h4G-UT-NtQ">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
@@ -58,6 +58,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="986.15384615384608" y="-2.1327014218009479"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="MAV-Vy-BFL">
+            <objects>
+                <viewController id="h4G-UT-NtQ" customClass="HomeViewController" customModule="sensorApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nFb-og-HVV">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1xA-dM-zwd">
+                                <rect key="frame" x="0.0" y="47" width="390" height="260"/>
+                                <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="260" id="2pJ-9R-DBY"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="1ea-wA-wPt">
+                                <rect key="frame" x="0.0" y="307" width="390" height="503"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="RXP-9U-Mzz">
+                                        <rect key="frame" x="0.0" y="50" width="390" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RXP-9U-Mzz" id="ChJ-Do-apA">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="h4G-UT-NtQ" id="Gnp-UY-ikP"/>
+                                    <outlet property="delegate" destination="h4G-UT-NtQ" id="Uib-e9-M3d"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3YS-aS-pjL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3YS-aS-pjL" firstAttribute="trailing" secondItem="1ea-wA-wPt" secondAttribute="trailing" id="2y4-ya-QYC"/>
+                            <constraint firstItem="1ea-wA-wPt" firstAttribute="leading" secondItem="3YS-aS-pjL" secondAttribute="leading" id="5fU-gE-RVW"/>
+                            <constraint firstItem="1xA-dM-zwd" firstAttribute="leading" secondItem="3YS-aS-pjL" secondAttribute="leading" id="8Gh-AF-BZb"/>
+                            <constraint firstItem="3YS-aS-pjL" firstAttribute="bottom" secondItem="1ea-wA-wPt" secondAttribute="bottom" id="IpK-Pg-rrx"/>
+                            <constraint firstItem="1ea-wA-wPt" firstAttribute="top" secondItem="1xA-dM-zwd" secondAttribute="bottom" id="RwD-ZN-t82"/>
+                            <constraint firstItem="1xA-dM-zwd" firstAttribute="top" secondItem="3YS-aS-pjL" secondAttribute="top" id="US6-zO-0tT"/>
+                            <constraint firstItem="3YS-aS-pjL" firstAttribute="trailing" secondItem="1xA-dM-zwd" secondAttribute="trailing" id="fV9-f8-DWJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="gasesTableView" destination="1ea-wA-wPt" id="NHQ-jU-5xE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PlT-wf-Pcx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="986" y="688"/>
         </scene>
         <!--Report View Controller-->
         <scene sceneID="lem-qg-67F">
@@ -229,39 +283,6 @@
             </objects>
             <point key="canvasLocation" x="1824.6153846153845" y="-2.1327014218009479"/>
         </scene>
-        <!--Progress Bar View Controller-->
-        <scene sceneID="jOJ-bC-JKe">
-            <objects>
-                <viewController id="fFT-Lc-S6L" customClass="ProgressBarViewController" customModule="sensorApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="05i-Tq-rMu">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R2V-gR-AdT" customClass="GaugeView" customModule="sensorApp" customModuleProvider="target">
-                                <rect key="frame" x="75" y="302" width="240" height="240"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="240" id="0oy-K8-zbh"/>
-                                    <constraint firstAttribute="width" constant="240" id="pu8-VE-HQ4"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="69b-oV-1bK"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="R2V-gR-AdT" firstAttribute="centerY" secondItem="05i-Tq-rMu" secondAttribute="centerY" id="KuJ-V8-0y5"/>
-                            <constraint firstItem="R2V-gR-AdT" firstAttribute="centerX" secondItem="05i-Tq-rMu" secondAttribute="centerX" id="v7s-CU-t4e"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="HxB-RH-eZt"/>
-                    <connections>
-                        <outlet property="gaugeView" destination="R2V-gR-AdT" id="4Vg-Ct-LTo"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YsQ-8e-GDQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2655" y="-2"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="3hB-zq-Ovs">
             <objects>
@@ -284,6 +305,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

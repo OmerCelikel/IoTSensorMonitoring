@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     let viewModel = GasViewModel()
     var realTimeAllGases = [Gas]()
     var reportGas = [Gas]()
+    var gasValueListCount: Int?
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -34,8 +35,7 @@ class ViewController: UIViewController {
             case.success(let gases):
                 self.realTimeAllGases = gases
                 DispatchQueue.main.async {
-                    
-                    print(" -> realTimeAllGases From DispatchQueue \(self.realTimeAllGases)")
+                    //print(" -> realTimeAllGases From DispatchQueue \(self.realTimeAllGases)")
                     self.collectionView.reloadData()
                 }
             case .failure(let error):
@@ -47,7 +47,8 @@ class ViewController: UIViewController {
             switch result {
             case .success(let reports):
                 self.reportGas = reports
-                print("REPOrts : \(reports)")
+                //print("REPOrts : \(reports)")
+                self.gasValueListCount = reports.count
             case .failure(let error):
                 print(error)
             }
@@ -75,7 +76,10 @@ extension ViewController: UICollectionViewDataSource {
             
             print("Index path: \(indexPath.row)")
             print("Cell data count: \(realTimeAllGases.count)")
-            
+            if realTimeGasData.Name == reportGas[indexPath.row].Name {
+                print("FOUND : \(reportGas[indexPath.row - 1].Name)")
+                //cell.setupTable()
+            }
             cell.setup2(with: realTimeGasData)
             
             return cell

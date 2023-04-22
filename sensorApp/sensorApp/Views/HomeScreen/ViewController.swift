@@ -66,7 +66,7 @@ extension ViewController: UICollectionViewDataSource {
                 return cell
             } else {
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "LineChartsCollectionViewCell", for: indexPath) as! LineChartsCollectionViewCell
-                let chartData = chartData[indexPath.row]
+                let chartData = chartData[indexPath.row - 1]
                 cell.setup(with: chartData)
                 
                 return cell

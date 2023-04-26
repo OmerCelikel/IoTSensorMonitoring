@@ -15,7 +15,6 @@ class ViewController: UIViewController {
     var reportGas = [Gas]()
     var gasValueListCount: Int?
     var averageTemperature: Double?
-    
     var timer: Timer?
     
     @IBOutlet weak var collectionView: UICollectionView!

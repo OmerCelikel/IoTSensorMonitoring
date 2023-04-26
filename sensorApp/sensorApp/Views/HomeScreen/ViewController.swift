@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     var realTimeAllGases = [Gas]()
     var reportGas = [Gas]()
     var gasValueListCount: Int?
+    var averageTemperature: Double?
+    
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -38,6 +40,7 @@ class ViewController: UIViewController {
                     //print(" -> realTimeAllGases From DispatchQueue \(self.realTimeAllGases)")
                     self.collectionView.reloadData()
                 }
+                self.averageTemperature = self.averageTemperatureCalc(gasDataArr: self.realTimeAllGases)
             case .failure(let error):
                 print(error)
             }
@@ -56,6 +59,17 @@ class ViewController: UIViewController {
 
         
     }
+    func averageTemperatureCalc(gasDataArr: [Gas]) -> Double {
+        var totalTemp = 0.0
+        var countGas = 0
+        for gas in gasDataArr {
+            if gas.Name.contains("Temperature") {
+                totalTemp += gas.Value
+                countGas += 1
+            }
+        }
+        return totalTemp/Double(countGas)
+    }
 }
 
 extension ViewController: UICollectionViewDataSource {
@@ -67,19 +81,15 @@ extension ViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if indexPath.row == 0 {
+            
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GaugeCollectionViewCell", for: indexPath) as! GaugeCollectionViewCell
-            cell.setup(with: TemperatureData.init(temperature: 50))
+            cell.setup(with: TemperatureData.init(temperature: Float(averageTemperature ?? 0)))
             return cell
         } else {
+            var newIndexPathRow = indexPath.row - 1
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "LineChartsCollectionViewCell", for: indexPath) as! LineChartsCollectionViewCell
-            let realTimeGasData = realTimeAllGases[indexPath.row - 1]
+            let realTimeGasData = realTimeAllGases[newIndexPathRow]
             
-            print("Index path: \(indexPath.row)")
-            print("Cell data count: \(realTimeAllGases.count)")
-//            if realTimeGasData.Name == reportGas[indexPath.row].Name {
-//                print("FOUND : \(reportGas[indexPath.row - 1].Name)")
-//                //cell.setupTable()
-//            }
             cell.setup2(with: realTimeGasData)
             
             return cell

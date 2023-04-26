@@ -18,7 +18,15 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        // Schedule timer to refresh data every 2 seconds
+        timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(refreshData), userInfo: nil, repeats: true)
+        
+        // Fetch initial data
+        refreshData()
+    }
+    
+    @objc func refreshData() {
         viewModel.getAllGases { result in
             switch result {
             case.success(let gases):
@@ -32,7 +40,6 @@ class HomeViewController: UIViewController {
             }
         }
     }
-
 }
 
 extension HomeViewController: UITableViewDataSource {

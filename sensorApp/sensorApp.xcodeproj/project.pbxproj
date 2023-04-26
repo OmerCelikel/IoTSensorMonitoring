@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		560FB8F329F8F469005DA796 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560FB8F229F8F469005DA796 /* HomeTableViewCell.swift */; };
+		560FB8F529F9372D005DA796 /* fadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560FB8F429F9372D005DA796 /* fadeTransition.swift */; };
+		560FB8F729F93D7F005DA796 /* ValuesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560FB8F629F93D7F005DA796 /* ValuesViewController.swift */; };
 		F60BBF6D29F4577B00C1AB4C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60BBF6C29F4577B00C1AB4C /* HomeViewController.swift */; };
 		F611F4A729D2ED2D003D4ACB /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F611F4A529D2ED2D003D4ACB /* CategoryCollectionViewCell.swift */; };
 		F611F4A829D2ED2D003D4ACB /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F611F4A629D2ED2D003D4ACB /* CategoryCollectionViewCell.xib */; };
@@ -74,6 +76,8 @@
 
 /* Begin PBXFileReference section */
 		560FB8F229F8F469005DA796 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		560FB8F429F9372D005DA796 /* fadeTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fadeTransition.swift; sourceTree = "<group>"; };
+		560FB8F629F93D7F005DA796 /* ValuesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValuesViewController.swift; sourceTree = "<group>"; };
 		F60BBF6C29F4577B00C1AB4C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F611F4A529D2ED2D003D4ACB /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		F611F4A629D2ED2D003D4ACB /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -198,6 +202,7 @@
 				F6ADAFAA29D2390E00AE1C2C /* HomeScreen */,
 				F6ADAFA929D238F300AE1C2C /* ReportScreen */,
 				F69EB4A729DCC832003D340D /* ProgressBarViewController.swift */,
+				560FB8F629F93D7F005DA796 /* ValuesViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -207,6 +212,7 @@
 			children = (
 				F611F4B029D2EE43003D4ACB /* String+Extension.swift */,
 				F611F4B529D2EE9F003D4ACB /* UIView+Extension.swift */,
+				560FB8F429F9372D005DA796 /* fadeTransition.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -564,10 +570,12 @@
 				F611F4B429D2EE6F003D4ACB /* CardView.swift in Sources */,
 				F611F50129D45B37003D4ACB /* ChartData.swift in Sources */,
 				F6E0998329E1A90F002D4809 /* TemperatureData.swift in Sources */,
+				560FB8F729F93D7F005DA796 /* ValuesViewController.swift in Sources */,
 				F6E79A0C29EBE35C0047C93D /* GasRequest.swift in Sources */,
 				F611F4F329D44368003D4ACB /* GraphView.swift in Sources */,
 				F6E0998B29E1AE0F002D4809 /* GasCategory.swift in Sources */,
 				F611F4A729D2ED2D003D4ACB /* CategoryCollectionViewCell.swift in Sources */,
+				560FB8F529F9372D005DA796 /* fadeTransition.swift in Sources */,
 				F611F4FE29D4573A003D4ACB /* LineChartsCollectionViewCell.swift in Sources */,
 				F6E79A0E29EBED1A0047C93D /* AFService.swift in Sources */,
 				F6E799FE29EBE2260047C93D /* RealTimeAllGasses.swift in Sources */,

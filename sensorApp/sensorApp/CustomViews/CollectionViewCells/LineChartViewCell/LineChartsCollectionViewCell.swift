@@ -14,18 +14,17 @@ class LineChartsCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var gasNameTextLabel: UILabel!
     
     @IBOutlet weak var gasValueTextLabel: UILabel!
-    
-    var dataEntries = [ChartDataEntry]()
-    
-    func setup2(with gasData: Gas) {
+        
+    func setup(with gasData: Gas) {
         
         gasNameTextLabel.text = gasData.Name
         gasValueTextLabel.text = String(format: "%.2f",gasData.Value)
-        
+        self.gasValueTextLabel.textColor = (gasData.Value > self.gasValueTextLabel.text.flatMap(Double.init) ?? 0) ? .green : .red
     }
     
     func setupEmpty() {
-        gasNameTextLabel.text = "chart.name"
+        gasNameTextLabel.text = "no gas"
+        gasValueTextLabel.text = "no value"
     }
 
 }

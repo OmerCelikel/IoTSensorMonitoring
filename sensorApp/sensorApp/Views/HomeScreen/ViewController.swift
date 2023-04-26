@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     var gasValueListCount: Int?
     var averageTemperature: Double?
     
+    var timer: Timer?
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -31,20 +32,9 @@ class ViewController: UIViewController {
         
         collectionView.register(UINib(nibName: "GaugeCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "GaugeCollectionViewCell")
         
+        timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(refreshData), userInfo: nil, repeats: true)
         
-        viewModel.getAllGases { result in
-            switch result {
-            case.success(let gases):
-                self.realTimeAllGases = gases
-                DispatchQueue.main.async {
-                    //print(" -> realTimeAllGases From DispatchQueue \(self.realTimeAllGases)")
-                    self.collectionView.reloadData()
-                }
-                self.averageTemperature = self.averageTemperatureCalc(gasDataArr: self.realTimeAllGases)
-            case .failure(let error):
-                print(error)
-            }
-        }
+        refreshData()
         
         viewModel.postGasReport(date: "-1m", field: "DHT22_Temperature") { result in
             switch result {
@@ -70,6 +60,21 @@ class ViewController: UIViewController {
         }
         return totalTemp/Double(countGas)
     }
+    
+    @objc func refreshData() {
+        viewModel.getAllGases { result in
+            switch result {
+            case.success(let gases):
+                self.realTimeAllGases = gases
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
+                self.averageTemperature = self.averageTemperatureCalc(gasDataArr: self.realTimeAllGases)
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
 }
 
 extension ViewController: UICollectionViewDataSource {
@@ -90,7 +95,7 @@ extension ViewController: UICollectionViewDataSource {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "LineChartsCollectionViewCell", for: indexPath) as! LineChartsCollectionViewCell
             let realTimeGasData = realTimeAllGases[newIndexPathRow]
             
-            cell.setup2(with: realTimeGasData)
+            cell.setup(with: realTimeGasData)
             
             return cell
         }

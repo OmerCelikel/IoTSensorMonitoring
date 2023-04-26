@@ -15,7 +15,6 @@ import UIKit
         didSet {
             setNeedsDisplay()
             updateLabel()
-            startAnimation()
         }
     }
     
@@ -45,13 +44,6 @@ import UIKit
         let valueRatio = (value - minValue) / valueRange
         let colorEndAngle = startAngle + (endAngle - startAngle) * valueRatio
         
-        // Draw the red portion
-        //        let colorPath = UIBezierPath(arcCenter: center, radius: radius, startAngle: startAngle, endAngle: colorEndAngle, clockwise: true)
-        //        colorPath.lineWidth = 20
-        //        temperatureToRGB(temperature: value).setStroke()
-        //        colorPath.stroke()
-        // Draw the red portion
-        
         let colorPath = UIBezierPath(arcCenter: center, radius: radius, startAngle: startAngle, endAngle: colorEndAngle, clockwise: true)
         colorPath.lineWidth = 15
         let gradientLayer = CAGradientLayer()
@@ -79,7 +71,6 @@ import UIKit
         let lightGray = UIColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 0.6)
         lightGray.setStroke()
         grayPath.stroke()
-    
         
         // Add label to the center of the gauge
         label.frame = CGRect(x: center.x - 50, y: center.y - 15, width: 100, height: 30)
@@ -88,16 +79,12 @@ import UIKit
         label.font = UIFont.systemFont(ofSize: 18)
         self.addSubview(label)
 
-
         let valueString = String(format: "%.1f °C", value)
         let font = UIFont.boldSystemFont(ofSize: 30)
         let attributes = [NSAttributedString.Key.font: font]
         let size = valueString.size(withAttributes: attributes)
         let point = CGPoint(x: center.x - size.width/2, y: center.y - size.height/2)
         valueString.draw(at: point, withAttributes: attributes)
-        
-        
-
         updateLabel()
     }
     
@@ -130,16 +117,4 @@ import UIKit
         
         return UIColor(red: red, green: green, blue: blue, alpha: 1.0)
     }
-    
-    func startAnimation() {
-        let strokeAnimation = CABasicAnimation(keyPath: "strokeEnd")
-        strokeAnimation.fromValue = 0
-        strokeAnimation.toValue = value / maxValue
-        strokeAnimation.duration = 2.5
-        strokeAnimation.fillMode = .forwards
-        strokeAnimation.isRemovedOnCompletion = false
-        self.layer.add(strokeAnimation, forKey: "strokeAnimation")
-    }
-    
-    
 }

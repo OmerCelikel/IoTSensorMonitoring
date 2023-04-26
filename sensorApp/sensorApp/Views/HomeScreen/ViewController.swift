@@ -76,10 +76,10 @@ extension ViewController: UICollectionViewDataSource {
             
             print("Index path: \(indexPath.row)")
             print("Cell data count: \(realTimeAllGases.count)")
-            if realTimeGasData.Name == reportGas[indexPath.row].Name {
-                print("FOUND : \(reportGas[indexPath.row - 1].Name)")
-                //cell.setupTable()
-            }
+//            if realTimeGasData.Name == reportGas[indexPath.row].Name {
+//                print("FOUND : \(reportGas[indexPath.row - 1].Name)")
+//                //cell.setupTable()
+//            }
             cell.setup2(with: realTimeGasData)
             
             return cell
@@ -96,8 +96,8 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
             return CGSize(width: width, height: height)
         } else {
             // Set default size for all other items
-            let width = (collectionView.bounds.width - 10) / 2
-            return CGSize(width: width, height: 250)
+            let width = (collectionView.bounds.width - 10)
+            return CGSize(width: width, height: 80)
         }
     }
     

@@ -10,7 +10,7 @@ import Charts
 
 class LineChartsCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet weak var lineChartView: LineChartView!
+    //@IBOutlet weak var lineChartView: LineChartView!
     @IBOutlet weak var gasNameTextLabel: UILabel!
     
     @IBOutlet weak var gasValueTextLabel: UILabel!
@@ -30,40 +30,40 @@ class LineChartsCollectionViewCell: UICollectionViewCell {
         let lineColor = UIColor(red: 237/255, green: 111/255, blue: 128/255, alpha: 1)
         dataSet.colors = [lineColor]
 //        dataSet.colors = [NSUIColor.systemBlue.withAlphaComponent(1)]
-        dataSet.lineWidth = 2.0
+        //dataSet.lineWidth = 2.0
         dataSet.drawValuesEnabled = false
         
         // Hide x axis grid lines
-        lineChartView.xAxis.drawGridLinesEnabled = false
+        //lineChartView.xAxis.drawGridLinesEnabled = false
         
         // Show y axis grid lines
-        lineChartView.leftAxis.drawGridLinesEnabled = true
+        //lineChartView.leftAxis.drawGridLinesEnabled = true
         
         // Configure the line chart to use cubic interpolation and add a shadow
         dataSet.mode = .cubicBezier
         
         dataSet.drawCirclesEnabled = false
         // Remove x-axis from top and show labels only on the bottom
-        lineChartView.xAxis.drawAxisLineEnabled = false
-        lineChartView.xAxis.labelPosition = .bottom
+        //lineChartView.xAxis.drawAxisLineEnabled = false
+        //lineChartView.xAxis.labelPosition = .bottom
         
         // Remove y-axis from right and show labels only on the left
-        lineChartView.rightAxis.enabled = false
-        lineChartView.leftAxis.enabled = false
+        //lineChartView.rightAxis.enabled = false
+        //lineChartView.leftAxis.enabled = false
         
         // Create a LineChartData object from the LineChartDataSet
-        let chartData = LineChartData(dataSet: dataSet)
+        //let chartData = LineChartData(dataSet: dataSet)
         
-        lineChartView.xAxis.drawLabelsEnabled = false
-        lineChartView.leftAxis.drawLabelsEnabled = false
+        //lineChartView.xAxis.drawLabelsEnabled = false
+        //lineChartView.leftAxis.drawLabelsEnabled = false
 
-        lineChartView.leftAxis.gridColor = UIColor.white
-        lineChartView.legend.enabled = false
+        //lineChartView.leftAxis.gridColor = UIColor.white
+        //lineChartView.legend.enabled = false
 
         
         // Set the data property of the LineChartView to the LineChartData
-        lineChartView.data = chartData
-        lineChartView.animate(xAxisDuration: 1.5)
+        //lineChartView.data = chartData
+        //lineChartView.animate(xAxisDuration: 1.5)
     }
     
     func setup2(with chart: Gas) {
@@ -85,35 +85,35 @@ class LineChartsCollectionViewCell: UICollectionViewCell {
         dataSet.drawValuesEnabled = false
         
         // Hide x axis grid lines
-        lineChartView.xAxis.drawGridLinesEnabled = false
+        //lineChartView.xAxis.drawGridLinesEnabled = false
         
         // Show y axis grid lines
-        lineChartView.leftAxis.drawGridLinesEnabled = true
+        //lineChartView.leftAxis.drawGridLinesEnabled = true
         
         // Configure the line chart to use cubic interpolation and add a shadow
-        dataSet.mode = .cubicBezier
+        //dataSet.mode = .cubicBezier
         
-        dataSet.drawCirclesEnabled = false
+        //dataSet.drawCirclesEnabled = false
         // Remove x-axis from top and show labels only on the bottom
-        lineChartView.xAxis.drawAxisLineEnabled = false
-        lineChartView.xAxis.labelPosition = .bottom
+        //lineChartView.xAxis.drawAxisLineEnabled = false
+        //lineChartView.xAxis.labelPosition = .bottom
         
         // Remove y-axis from right and show labels only on the left
-        lineChartView.rightAxis.enabled = false
-        lineChartView.leftAxis.enabled = false
+       // lineChartView.rightAxis.enabled = false
+       // lineChartView.leftAxis.enabled = false
         
         // Create a LineChartData object from the LineChartDataSet
-        let chartData = LineChartData(dataSet: dataSet)
+       // let chartData = LineChartData(dataSet: dataSet)
         
-        lineChartView.xAxis.drawLabelsEnabled = false
-        lineChartView.leftAxis.drawLabelsEnabled = false
+       // lineChartView.xAxis.drawLabelsEnabled = false
+       // lineChartView.leftAxis.drawLabelsEnabled = false
 
-        lineChartView.leftAxis.gridColor = UIColor.white
-        lineChartView.legend.enabled = false
+       // lineChartView.leftAxis.gridColor = UIColor.white
+       // lineChartView.legend.enabled = false
 
         
         // Set the data property of the LineChartView to the LineChartData
-        lineChartView.data = chartData
+        //lineChartView.data = chartData
         //lineChartView.animate(xAxisDuration: 1.5)
     }
     

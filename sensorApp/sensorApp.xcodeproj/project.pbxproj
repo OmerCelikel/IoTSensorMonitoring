@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		560FB8F329F8F469005DA796 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560FB8F229F8F469005DA796 /* HomeTableViewCell.swift */; };
 		F60BBF6D29F4577B00C1AB4C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60BBF6C29F4577B00C1AB4C /* HomeViewController.swift */; };
 		F611F4A729D2ED2D003D4ACB /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F611F4A529D2ED2D003D4ACB /* CategoryCollectionViewCell.swift */; };
 		F611F4A829D2ED2D003D4ACB /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F611F4A629D2ED2D003D4ACB /* CategoryCollectionViewCell.xib */; };
@@ -72,6 +73,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		560FB8F229F8F469005DA796 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		F60BBF6C29F4577B00C1AB4C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F611F4A529D2ED2D003D4ACB /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		F611F4A629D2ED2D003D4ACB /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -150,6 +152,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		560FB8F129F8F3BE005DA796 /* TestHomeView */ = {
+			isa = PBXGroup;
+			children = (
+				F60BBF6C29F4577B00C1AB4C /* HomeViewController.swift */,
+				560FB8F229F8F469005DA796 /* HomeTableViewCell.swift */,
+			);
+			path = TestHomeView;
+			sourceTree = "<group>";
+		};
 		F611F4A229D2ECC6003D4ACB /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -319,9 +330,9 @@
 		F6ADAFAA29D2390E00AE1C2C /* HomeScreen */ = {
 			isa = PBXGroup;
 			children = (
+				560FB8F129F8F3BE005DA796 /* TestHomeView */,
 				F6ADAF7029D1F92000AE1C2C /* ViewController.swift */,
 				F633208729F1919B00418B11 /* GasViewModel.swift */,
-				F60BBF6C29F4577B00C1AB4C /* HomeViewController.swift */,
 			);
 			path = HomeScreen;
 			sourceTree = "<group>";
@@ -560,6 +571,7 @@
 				F611F4FE29D4573A003D4ACB /* LineChartsCollectionViewCell.swift in Sources */,
 				F6E79A0E29EBED1A0047C93D /* AFService.swift in Sources */,
 				F6E799FE29EBE2260047C93D /* RealTimeAllGasses.swift in Sources */,
+				560FB8F329F8F469005DA796 /* HomeTableViewCell.swift in Sources */,
 				F60BBF6D29F4577B00C1AB4C /* HomeViewController.swift in Sources */,
 				F611F4BC29D32316003D4ACB /* TimeCategoryCollectionViewCell.swift in Sources */,
 				F611F4B829D3217F003D4ACB /* TimeCategory.swift in Sources */,

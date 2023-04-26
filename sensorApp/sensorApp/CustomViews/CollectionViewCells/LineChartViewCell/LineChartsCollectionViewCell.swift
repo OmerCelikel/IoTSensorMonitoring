@@ -66,7 +66,7 @@ class LineChartsCollectionViewCell: UICollectionViewCell {
         lineChartView.animate(xAxisDuration: 1.5)
     }
     
-    func setup2(with chart: Gas) {
+    func setup2(to chart: Gas) {
         
         for point in 1...10 {
             let entry = ChartDataEntry(x: Double(point) + 1.0, y: chart.Value)

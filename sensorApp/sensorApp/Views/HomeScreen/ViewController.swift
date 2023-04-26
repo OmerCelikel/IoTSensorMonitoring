@@ -71,16 +71,17 @@ extension ViewController: UICollectionViewDataSource {
             cell.setup(with: TemperatureData.init(temperature: 50))
             return cell
         } else {
+            var newIndexPath = indexPath.row - 1
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "LineChartsCollectionViewCell", for: indexPath) as! LineChartsCollectionViewCell
-            let realTimeGasData = realTimeAllGases[indexPath.row - 1]
+            let realTimeGasData = realTimeAllGases[newIndexPath]
             
             print("Index path: \(indexPath.row)")
             print("Cell data count: \(realTimeAllGases.count)")
             if realTimeGasData.Name == reportGas[indexPath.row].Name {
-                print("FOUND : \(reportGas[indexPath.row - 1].Name)")
+                print("FOUND : \(reportGas[newIndexPath].Name)")
                 //cell.setupTable()
             }
-            cell.setup2(with: realTimeGasData)
+            cell.setup2(to: realTimeGasData)
             
             return cell
         }

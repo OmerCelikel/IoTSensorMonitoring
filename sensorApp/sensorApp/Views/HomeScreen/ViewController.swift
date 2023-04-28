@@ -115,7 +115,6 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let selectedGasData = chartData[indexPath.item]
         performSegue(withIdentifier: "showReport", sender: realTimeAllGases[indexPath.row + 1])
     }
     

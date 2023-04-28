@@ -35,16 +35,16 @@ class ViewController: UIViewController {
         
         refreshData()
         
-        viewModel.postGasReport(date: "-1m", field: "DHT22_Temperature") { result in
-            switch result {
-            case .success(let reports):
-                self.reportGas = reports
-                //print("REPOrts : \(reports)")
-                self.gasValueListCount = reports.count
-            case .failure(let error):
-                print(error)
-            }
-        }
+//        viewModel.postGasReport(date: "-1m", field: "DHT22_Temperature") { result in
+//            switch result {
+//            case .success(let reports):
+//                self.reportGas = reports
+//                //print("REPOrts : \(reports)")
+//                self.gasValueListCount = reports.count
+//            case .failure(let error):
+//                print(error)
+//            }
+//        }
 
         
     }
@@ -79,7 +79,7 @@ class ViewController: UIViewController {
 extension ViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         //return chartData.count
-        return realTimeAllGases.count
+        return realTimeAllGases.count + 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

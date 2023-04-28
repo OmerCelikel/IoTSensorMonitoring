@@ -35,17 +35,17 @@ class ViewController: UIViewController {
         
         refreshData()
         
-//        viewModel.postGasReport(date: "-1m", field: "DHT22_Temperature") { result in
-//            switch result {
-//            case .success(let reports):
-//                self.reportGas = reports
-//                //print("REPOrts : \(reports)")
-//                self.gasValueListCount = reports.count
-//            case .failure(let error):
-//                print(error)
-//            }
-//        }
-
+        //        viewModel.postGasReport(date: "-1m", field: "DHT22_Temperature") { result in
+        //            switch result {
+        //            case .success(let reports):
+        //                self.reportGas = reports
+        //                //print("REPOrts : \(reports)")
+        //                self.gasValueListCount = reports.count
+        //            case .failure(let error):
+        //                print(error)
+        //            }
+        //        }
+        
         
     }
     func averageTemperatureCalc(gasDataArr: [Gas]) -> Double {
@@ -78,7 +78,6 @@ class ViewController: UIViewController {
 
 extension ViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        //return chartData.count
         return realTimeAllGases.count + 1
     }
     
@@ -90,7 +89,7 @@ extension ViewController: UICollectionViewDataSource {
             cell.setup(with: TemperatureData.init(temperature: Float(averageTemperature ?? 0)))
             return cell
         } else {
-            var newIndexPathRow = indexPath.row - 1
+            let newIndexPathRow = indexPath.row - 1
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "LineChartsCollectionViewCell", for: indexPath) as! LineChartsCollectionViewCell
             let realTimeGasData = realTimeAllGases[newIndexPathRow]
             
@@ -117,14 +116,15 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let selectedGasData = chartData[indexPath.item]
-        performSegue(withIdentifier: "showReport", sender: selectedGasData)
+        performSegue(withIdentifier: "showReport", sender: realTimeAllGases[indexPath.row + 1])
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showReport" {
-            if let selectedGasData = sender as? ChartData,
+            if let selectedGasData = sender as? Gas,
                let reportViewController = segue.destination as? ReportViewController {
-                reportViewController.chartData = selectedGasData
+                reportViewController.selectedGasName = selectedGasData.Name
+                reportViewController.selectedGasValue = selectedGasData.Value
             }
         }
     }

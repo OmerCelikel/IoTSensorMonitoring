@@ -26,18 +26,33 @@ class ReportViewController: UIViewController {
         .init(id: "id12", name: "1 Week"),
         .init(id: "id13", name: "1 Month")
     ]
-    
-    // Create an array of ChartDataEntry objects
-    var chartData: ChartData?
+
     var dataEntries = [ChartDataEntry]()
+    var selectedGasName = String()
+    var selectedGasValue = Double()
+    
+    let chartData: [ChartData] = [
+        ChartData(name: "Gas 1", dataEntries: [
+                    ChartDataEntry(x: 1, y: 5.0),
+                    ChartDataEntry(x: 2, y: 4.9),
+                    ChartDataEntry(x: 3, y: 4.9),
+                    ChartDataEntry(x: 4, y: 5.0),
+                    ChartDataEntry(x: 5, y: 5.0),
+                    ChartDataEntry(x: 6, y: 4.95),
+                    ChartDataEntry(x: 7, y: 5.0),
+                    ChartDataEntry(x: 8, y: 5.0),
+                    ChartDataEntry(x: 9, y: 4.9),
+                    ChartDataEntry(x: 10, y: 4.8)
+                ])
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         registerCells()
-        if let chartData = chartData {
-            setupChart(with: chartData)
-        }
+        setupChart(with: chartData[0])
+        
+        print("selectedGasName \(selectedGasName) \n selectedGasValue \(selectedGasValue)")
     }
     
     private func registerCells() {

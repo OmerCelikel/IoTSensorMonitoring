@@ -13,7 +13,7 @@ class ReportViewController: UIViewController {
     @IBOutlet weak var categoryCollectionView: UICollectionView!
     @IBOutlet weak var timeCollectionView: UICollectionView!
     @IBOutlet weak var lineChartView: LineChartView!
-
+    
     var categories: [GasCategory] = [
         .init(id: "id1", name: "Temperature", image: "https://picsum.photos/100/200"),
         .init(id: "id2", name: "CO2", image: "https://picsum.photos/100/200"),
@@ -22,44 +22,132 @@ class ReportViewController: UIViewController {
     ]
     
     var times: [TimeCategory] = [
-        .init(id: "id11", name: "1 Day"),
-        .init(id: "id12", name: "1 Week"),
-        .init(id: "id13", name: "1 Month")
+        .init(id: "-1m", name: "1 Min"),
+        .init(id: "-5m", name: "5 Min"),
+        .init(id: "-30m", name: "30 Min"),
+        .init(id: "-1h", name: "1 Hour"),
+        .init(id: "-2h", name: "2 Hour")
     ]
-
+    
     var dataEntries = [ChartDataEntry]()
+    var dataEntriesForGas = [ChartDataEntry]()
     var selectedGasName = String()
     var selectedGasValue = Double()
+    var specificGasData = [Gas]()
+    var selectedTimeCategory: TimeCategory?
+    
     
     let chartData: [ChartData] = [
         ChartData(name: "Gas 1", dataEntries: [
-                    ChartDataEntry(x: 1, y: 5.0),
-                    ChartDataEntry(x: 2, y: 4.9),
-                    ChartDataEntry(x: 3, y: 4.9),
-                    ChartDataEntry(x: 4, y: 5.0),
-                    ChartDataEntry(x: 5, y: 5.0),
-                    ChartDataEntry(x: 6, y: 4.95),
-                    ChartDataEntry(x: 7, y: 5.0),
-                    ChartDataEntry(x: 8, y: 5.0),
-                    ChartDataEntry(x: 9, y: 4.9),
-                    ChartDataEntry(x: 10, y: 4.8)
-                ])
+            ChartDataEntry(x: 1, y: 5.0),
+            ChartDataEntry(x: 2, y: 4.9),
+            ChartDataEntry(x: 3, y: 4.9),
+            ChartDataEntry(x: 4, y: 5.0),
+            ChartDataEntry(x: 5, y: 5.0),
+            ChartDataEntry(x: 6, y: 4.95),
+            ChartDataEntry(x: 7, y: 5.0),
+            ChartDataEntry(x: 8, y: 5.0),
+            ChartDataEntry(x: 9, y: 4.9),
+            ChartDataEntry(x: 10, y: 4.8)
+        ])
     ]
+    
+    let reportViewModel = ReportViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         registerCells()
-        setupChart(with: chartData[0])
-        
+        //setupChart(with: chartData[0])
         print("selectedGasName \(selectedGasName) \n selectedGasValue \(selectedGasValue)")
+        
+        selectedTimeCategory = times[0] // set default time category
+        updateGasReport()
+        
+        //        reportViewModel.postGasReport(date: "-20m", field: "DHT22_Temperature") { result in
+        //            switch result {
+        //            case .success(let reports):
+        //                self.specificGasData = reports
+        //                self.dataSetForLineChart(gasData: self.specificGasData)
+        //            case .failure(let error):
+        //                print(error)
+        //            }
+        //        }
+        
     }
+    
+    func updateGasReport() {
+
+        let date = selectedTimeCategory?.id ?? "-1m"
+        print("DATE -> \(date)")
+        reportViewModel.postGasReport(date: date, field: selectedGasName) { result in
+            switch result {
+            case .success(let reports):
+                self.specificGasData = reports
+                self.clearLineChart()
+                self.dataSetForLineChart(gasData: self.specificGasData)
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    func clearLineChart() {
+        lineChartView.clear()
+        dataEntries.removeAll()
+    }
+    
     
     private func registerCells() {
         categoryCollectionView.register(UINib(nibName: CategoryCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: CategoryCollectionViewCell.identifier)
         
         timeCollectionView.register(UINib(nibName: TimeCategoryCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: TimeCategoryCollectionViewCell.identifier)
     }
+    
+    func dataSetForLineChart(gasData: [Gas]) {
+        // Iterate through the data array,
+        print("gasData: \(gasData)")
+        var count = 0.0
+        for dataPoint in gasData {
+            let newEntry = ChartDataEntry(x: count, y: dataPoint.Value)
+            dataEntries.append(newEntry)
+            count += 1
+        }
+        setUpLineGraph(dataEntries: dataEntries)
+    }
+    
+    func setUpLineGraph(dataEntries: [ChartDataEntry]) {
+        // Create a LineChartDataSet from the data entries
+        let dataSet = LineChartDataSet(entries: dataEntries, label: "Random Data")
+        dataSet.colors = [NSUIColor.systemBlue.withAlphaComponent(1)]
+        dataSet.lineWidth = 4.0
+        dataSet.drawValuesEnabled = false
+        
+        // Hide x axis grid lines
+        lineChartView.xAxis.drawGridLinesEnabled = false
+        
+        // Hide y axis grid lines
+        lineChartView.leftAxis.drawGridLinesEnabled = false
+        
+        // Configure the line chart to use cubic interpolation and add a shadow
+        dataSet.mode = .cubicBezier
+        
+        dataSet.drawCirclesEnabled = false
+        // Remove x-axis from top and show labels only on the bottom
+        lineChartView.xAxis.drawAxisLineEnabled = false
+        lineChartView.xAxis.labelPosition = .bottom
+        
+        // Remove y-axis from right and show labels only on the left
+        lineChartView.rightAxis.enabled = false
+        
+        // Create a LineChartData object from the LineChartDataSet
+        let chartData = LineChartData(dataSet: dataSet)
+        
+        // Set the data property of the LineChartView to the LineChartData
+        lineChartView.data = chartData
+        lineChartView.animate(xAxisDuration: 1.5)
+    }
+    
+    
     
     func setupChart(with chart: ChartData) {
         
@@ -77,10 +165,10 @@ class ReportViewController: UIViewController {
         
         // Hide x axis grid lines
         lineChartView.xAxis.drawGridLinesEnabled = false
-
+        
         // Hide y axis grid lines
         lineChartView.leftAxis.drawGridLinesEnabled = false
- 
+        
         // Configure the line chart to use cubic interpolation and add a shadow
         dataSet.mode = .cubicBezier
         
@@ -88,10 +176,10 @@ class ReportViewController: UIViewController {
         // Remove x-axis from top and show labels only on the bottom
         lineChartView.xAxis.drawAxisLineEnabled = false
         lineChartView.xAxis.labelPosition = .bottom
-
+        
         // Remove y-axis from right and show labels only on the left
         lineChartView.rightAxis.enabled = false
-
+        
         // Create a LineChartData object from the LineChartDataSet
         let chartData = LineChartData(dataSet: dataSet)
         
@@ -99,7 +187,7 @@ class ReportViewController: UIViewController {
         lineChartView.data = chartData
         lineChartView.animate(xAxisDuration: 1.5)
     }
-
+    
 }
 
 extension ReportViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -128,11 +216,9 @@ extension ReportViewController: UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //TODO: - When select items change color of view to purple.
-        print("didSelectItemAt")
-        
-        if let cell = collectionView.cellForItem(at: indexPath) {
-                cell.contentView.backgroundColor = .purple
-            }
+        if collectionView == timeCollectionView {
+            selectedTimeCategory = times[indexPath.row]
+            updateGasReport()
+        }
     }
 }

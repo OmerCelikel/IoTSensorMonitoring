@@ -20,17 +20,6 @@ class CardView: UIView {
         initialSetup()
     }
     
-//    private func initialSetup() {
-//        layer.backgroundColor = UIColor(red: 189/255, green: 189/255, blue: 189/255, alpha: 1.0).cgColor
-//        layer.shadowColor = UIColor.black.cgColor
-////        layer.shadowOffset = .zero
-//        layer.shadowOffset = CGSize(width: 0, height: 3)
-//        layer.cornerRadius = 10
-//        layer.shadowOpacity = 0.2
-//        layer.shadowRadius = 10
-//        cornerRadius = 10
-//    }
-    
     private func initialSetup() {
         //layer.backgroundColor = UIColor(red: 189/255, green: 189/255, blue: 189/255, alpha: 1.0).cgColor
         //layer.backgroundColor = UIColor.white.cgColor
@@ -42,6 +31,4 @@ class CardView: UIView {
         layer.shadowRadius = 5 // Adjust the blur radius of the shadow
         clipsToBounds = false // Allows the shadow to extend beyond the bounds of the view
     }
-
-
 }

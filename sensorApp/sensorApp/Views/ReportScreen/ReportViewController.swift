@@ -28,6 +28,8 @@ class ReportViewController: UIViewController {
     var specificGasData = [Gas]()
     var selectedTimeCategory: TimeCategory?
     let reportViewModel = ReportViewModel()
+    var selectedCardView: CardView?
+    let lineColor = UIColor(red: 48/255, green: 193/255, blue: 246/255, alpha: 1.0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,8 +76,8 @@ class ReportViewController: UIViewController {
     func setUpLineGraph(dataEntries: [ChartDataEntry]) {
         // Create a LineChartDataSet from the data entries
         let dataSet = LineChartDataSet(entries: dataEntries, label: "Random Data")
-        dataSet.colors = [NSUIColor.systemBlue.withAlphaComponent(1)]
-        dataSet.lineWidth = 4.0
+        dataSet.colors = [lineColor]
+        dataSet.lineWidth = 3.0
         dataSet.drawValuesEnabled = false
         
         // Hide x axis grid lines
@@ -130,5 +132,16 @@ extension ReportViewController: UICollectionViewDelegate, UICollectionViewDataSo
             selectedTimeCategory = times[indexPath.row]
             updateGasReport()
         }
+        
+        guard let cell = collectionView.cellForItem(at: indexPath) as? TimeCategoryCollectionViewCell else { return }
+        guard let cardView = cell.contentView.subviews.first(where: { $0 is CardView }) as? CardView else { return }
+        
+        cardView.isSelected = true
+        cardView.layer.backgroundColor = lineColor.cgColor
+        
+        selectedCardView?.isSelected = false
+        selectedCardView?.layer.backgroundColor = UIColor.white.cgColor
+        
+        selectedCardView = cardView
     }
 }

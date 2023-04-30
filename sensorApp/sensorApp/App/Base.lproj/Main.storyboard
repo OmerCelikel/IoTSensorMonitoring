@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2ug-g3-Lrh">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -73,48 +74,6 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="PeA-Y8-F0L">
                                         <rect key="frame" x="0.0" y="0.0" width="390" height="510"/>
                                         <subviews>
-                                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qtz-2f-jJ2">
-                                                <rect key="frame" x="0.0" y="-105" width="390" height="105"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Report" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJ1-tv-Xw3">
-                                                        <rect key="frame" x="20" y="8" width="354" height="24"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="24" id="j87-TO-6St"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="EZe-QZ-abR">
-                                                        <rect key="frame" x="0.0" y="40" width="390" height="60"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="60" id="eCk-ot-d7N"/>
-                                                        </constraints>
-                                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="Ydk-Bz-ess">
-                                                            <size key="itemSize" width="128" height="122"/>
-                                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                            <inset key="sectionInset" minX="20" minY="0.0" maxX="10" maxY="0.0"/>
-                                                        </collectionViewFlowLayout>
-                                                        <cells/>
-                                                        <connections>
-                                                            <outlet property="dataSource" destination="Mxp-eb-8HZ" id="XY1-4L-aQ2"/>
-                                                            <outlet property="delegate" destination="Mxp-eb-8HZ" id="aFU-7M-TxW"/>
-                                                        </connections>
-                                                    </collectionView>
-                                                </subviews>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstItem="nJ1-tv-Xw3" firstAttribute="leading" secondItem="qtz-2f-jJ2" secondAttribute="leading" constant="20" id="PvE-EW-wuU"/>
-                                                    <constraint firstItem="EZe-QZ-abR" firstAttribute="top" secondItem="nJ1-tv-Xw3" secondAttribute="bottom" constant="8" id="aac-cs-6C5"/>
-                                                    <constraint firstAttribute="trailing" secondItem="nJ1-tv-Xw3" secondAttribute="trailing" constant="16" id="gxs-pe-Kxv"/>
-                                                    <constraint firstAttribute="bottom" secondItem="EZe-QZ-abR" secondAttribute="bottom" constant="5" id="jnh-qn-VDa"/>
-                                                    <constraint firstItem="EZe-QZ-abR" firstAttribute="leading" secondItem="qtz-2f-jJ2" secondAttribute="leading" id="maT-EQ-m66"/>
-                                                    <constraint firstAttribute="trailing" secondItem="EZe-QZ-abR" secondAttribute="trailing" id="nc0-QR-9uW"/>
-                                                    <constraint firstItem="nJ1-tv-Xw3" firstAttribute="top" secondItem="qtz-2f-jJ2" secondAttribute="top" constant="8" id="tRh-ab-3DP"/>
-                                                </constraints>
-                                            </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H2h-Uu-m6g">
                                                 <rect key="frame" x="0.0" y="0.0" width="390" height="105"/>
                                                 <subviews>
@@ -220,7 +179,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="jI7-5C-1Kh"/>
                     <connections>
-                        <outlet property="categoryCollectionView" destination="EZe-QZ-abR" id="cpO-Yq-HRs"/>
                         <outlet property="lineChartView" destination="m7x-GD-Nzg" id="SRF-bf-kJW"/>
                         <outlet property="timeCollectionView" destination="TPc-XM-EvJ" id="RCR-6c-JEl"/>
                     </connections>

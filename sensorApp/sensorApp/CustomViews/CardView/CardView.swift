@@ -8,6 +8,7 @@
 import UIKit
 
 class CardView: UIView {
+    var isSelected = false
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -32,7 +33,8 @@ class CardView: UIView {
     
     private func initialSetup() {
         //layer.backgroundColor = UIColor(red: 189/255, green: 189/255, blue: 189/255, alpha: 1.0).cgColor
-        layer.backgroundColor = UIColor.white.cgColor
+        //layer.backgroundColor = UIColor.white.cgColor
+        layer.backgroundColor = isSelected ? UIColor.blue.cgColor : UIColor.white.cgColor
         layer.shadowColor = UIColor.black.cgColor
         layer.shadowOffset = CGSize(width: 0, height: 3) // Adjust the vertical offset to control the distance of the shadow from the view
         layer.cornerRadius = 10

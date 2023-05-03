@@ -17,9 +17,9 @@ class LineChartsCollectionViewCell: UICollectionViewCell {
         
     func setup(with gasData: Gas) {
         
-        gasNameTextLabel.text = gasData.Name
-        gasValueTextLabel.text = String(format: "%.2f",gasData.Value)
-        self.gasValueTextLabel.textColor = (gasData.Value > self.gasValueTextLabel.text.flatMap(Double.init) ?? 0) ? .green : .red
+        gasNameTextLabel.text = gasData.name
+        gasValueTextLabel.text = String(format: "%.2f",gasData.value)
+        self.gasValueTextLabel.textColor = (gasData.value > self.gasValueTextLabel.text.flatMap(Double.init) ?? 0) ? .green : .red
     }
     
     func setupEmpty() {

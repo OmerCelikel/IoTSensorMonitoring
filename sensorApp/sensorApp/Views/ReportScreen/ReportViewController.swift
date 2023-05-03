@@ -66,7 +66,7 @@ class ReportViewController: UIViewController {
         // Iterate through the data array,
         var count = 0.0
         for dataPoint in gasData {
-            let newEntry = ChartDataEntry(x: count, y: dataPoint.Value)
+            let newEntry = ChartDataEntry(x: count, y: dataPoint.value)
             dataEntries.append(newEntry)
             count += 1
         }

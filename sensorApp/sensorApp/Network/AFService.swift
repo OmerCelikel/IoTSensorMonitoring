@@ -10,35 +10,34 @@ import Foundation
 import Alamofire
 
 struct Gas: Codable {
-    let Name: String
-    let Time: Date
-    let Value: Double
+    let name: String
+    let time: Date
+    let value: Double
+    
+    enum CodingKeys: String, CodingKey {
+        case name = "Name"
+        case time = "Time"
+        case value = "Value"
+    }
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        Name = try container.decode(String.self, forKey: .Name)
+        name = try container.decode(String.self, forKey: .name)
         
-        let timeString = try container.decode(String.self, forKey: .Time)
+        let timeString = try container.decode(String.self, forKey: .time)
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         dateFormatter.locale = Locale(identifier: "en_US_POSIX")
         dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
         
         guard let time = dateFormatter.date(from: timeString) else {
-            throw DecodingError.dataCorruptedError(forKey: .Time, in: container, debugDescription: "Date string does not match format expected by formatter.")
+            throw DecodingError.dataCorruptedError(forKey: .time, in: container, debugDescription: "Date string does not match format expected by formatter.")
         }
-        Time = time
+        self.time = time
         
-        Value = try container.decode(Double.self, forKey: .Value)
+        value = try container.decode(Double.self, forKey: .value)
     }
 }
-
-struct ReportModel: Codable {
-    let Name: String
-    let Time: Date
-    let Value: Double
-}
-
 
 class AFGasService {
     

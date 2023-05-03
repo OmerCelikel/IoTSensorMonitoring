@@ -52,8 +52,8 @@ class ViewController: UIViewController {
         var totalTemp = 0.0
         var countGas = 0
         for gas in gasDataArr {
-            if gas.Name.contains("Temperature") {
-                totalTemp += gas.Value
+            if gas.name.contains("Temperature") {
+                totalTemp += gas.value
                 countGas += 1
             }
         }
@@ -122,8 +122,8 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
         if segue.identifier == "showReport" {
             if let selectedGasData = sender as? Gas,
                let reportViewController = segue.destination as? ReportViewController {
-                reportViewController.selectedGasName = selectedGasData.Name
-                reportViewController.selectedGasValue = selectedGasData.Value
+                reportViewController.selectedGasName = selectedGasData.name
+                reportViewController.selectedGasValue = selectedGasData.value
             }
         }
     }

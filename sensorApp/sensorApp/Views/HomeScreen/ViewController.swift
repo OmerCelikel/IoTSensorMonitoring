@@ -115,7 +115,7 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "showReport", sender: realTimeAllGases[indexPath.row + 1])
+        performSegue(withIdentifier: "showReport", sender: realTimeAllGases[indexPath.row - 1])
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -12,7 +12,9 @@ class ReportViewController: UIViewController {
     
     @IBOutlet weak var timeCollectionView: UICollectionView!
     @IBOutlet weak var lineChartView: LineChartView!
-
+    @IBOutlet weak var gasNameLabel: UILabel!
+    @IBOutlet weak var valueLabel: UILabel!
+    
     var times: [TimeCategory] = [
         .init(id: "-1m", name: "1 Min"),
         .init(id: "-5m", name: "5 Min"),
@@ -22,7 +24,6 @@ class ReportViewController: UIViewController {
     ]
     
     var dataEntries = [ChartDataEntry]()
-    var dataEntriesForGas = [ChartDataEntry]()
     var selectedGasName = String()
     var selectedGasValue = Double()
     var specificGasData = [Gas]()
@@ -47,6 +48,8 @@ class ReportViewController: UIViewController {
                 self.specificGasData = reports
                 self.clearLineChart()
                 self.dataSetForLineChart(gasData: self.specificGasData)
+                self.gasNameLabel.text = self.selectedGasName
+                self.valueLabel.text = "Value: \(String(format: "%.2f",self.selectedGasValue))"
             case .failure(let error):
                 print(error)
             }

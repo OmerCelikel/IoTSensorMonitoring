@@ -1,7 +1,7 @@
 #  Tasks
--   Put Data to View Controller
+-   Put Data to Raport View Controller
 -   String File to Keep All Strings in Project
 -   Color File
--   LaunchScreen
+-   Alert View time
 
 

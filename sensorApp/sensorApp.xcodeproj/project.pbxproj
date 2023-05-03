@@ -25,7 +25,6 @@
 		F69EB4A029DCA502003D340D /* LineChartDataSetCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69EB49F29DCA502003D340D /* LineChartDataSetCreator.swift */; };
 		F69EB4A529DCC216003D340D /* GaugeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69EB4A329DCC216003D340D /* GaugeCollectionViewCell.swift */; };
 		F69EB4A629DCC216003D340D /* GaugeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F69EB4A429DCC216003D340D /* GaugeCollectionViewCell.xib */; };
-		F69EB4A829DCC832003D340D /* ProgressBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69EB4A729DCC832003D340D /* ProgressBarViewController.swift */; };
 		F6ADAF6D29D1F92000AE1C2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ADAF6C29D1F92000AE1C2C /* AppDelegate.swift */; };
 		F6ADAF6F29D1F92000AE1C2C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ADAF6E29D1F92000AE1C2C /* SceneDelegate.swift */; };
 		F6ADAF7129D1F92000AE1C2C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ADAF7029D1F92000AE1C2C /* ViewController.swift */; };
@@ -45,12 +44,6 @@
 		F6E799FA29EBE0570047C93D /* RealTimeGasRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E799F929EBE0570047C93D /* RealTimeGasRequest.swift */; };
 		F6E799FC29EBE0B70047C93D /* RealTimeGasResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E799FB29EBE0B70047C93D /* RealTimeGasResponse.swift */; };
 		F6E799FE29EBE2260047C93D /* RealTimeAllGasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E799FD29EBE2260047C93D /* RealTimeAllGasses.swift */; };
-		F6E79A0129EBE2C00047C93D /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E79A0029EBE2C00047C93D /* Network.swift */; };
-		F6E79A0329EBE2D40047C93D /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E79A0229EBE2D40047C93D /* Requestable.swift */; };
-		F6E79A0529EBE2E50047C93D /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E79A0429EBE2E50047C93D /* HTTPMethod.swift */; };
-		F6E79A0729EBE2F70047C93D /* ParameterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E79A0629EBE2F70047C93D /* ParameterType.swift */; };
-		F6E79A0A29EBE34D0047C93D /* GasService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E79A0929EBE34D0047C93D /* GasService.swift */; };
-		F6E79A0C29EBE35C0047C93D /* GasRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E79A0B29EBE35C0047C93D /* GasRequest.swift */; };
 		F6E79A0E29EBED1A0047C93D /* AFService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E79A0D29EBED190047C93D /* AFService.swift */; };
 /* End PBXBuildFile section */
 
@@ -92,7 +85,6 @@
 		F69EB49F29DCA502003D340D /* LineChartDataSetCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartDataSetCreator.swift; sourceTree = "<group>"; };
 		F69EB4A329DCC216003D340D /* GaugeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugeCollectionViewCell.swift; sourceTree = "<group>"; };
 		F69EB4A429DCC216003D340D /* GaugeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GaugeCollectionViewCell.xib; sourceTree = "<group>"; };
-		F69EB4A729DCC832003D340D /* ProgressBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarViewController.swift; sourceTree = "<group>"; };
 		F6ADAF6929D1F92000AE1C2C /* sensorApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sensorApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6ADAF6C29D1F92000AE1C2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6ADAF6E29D1F92000AE1C2C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,12 +105,6 @@
 		F6E799F929EBE0570047C93D /* RealTimeGasRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTimeGasRequest.swift; sourceTree = "<group>"; };
 		F6E799FB29EBE0B70047C93D /* RealTimeGasResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTimeGasResponse.swift; sourceTree = "<group>"; };
 		F6E799FD29EBE2260047C93D /* RealTimeAllGasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTimeAllGasses.swift; sourceTree = "<group>"; };
-		F6E79A0029EBE2C00047C93D /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
-		F6E79A0229EBE2D40047C93D /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
-		F6E79A0429EBE2E50047C93D /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
-		F6E79A0629EBE2F70047C93D /* ParameterType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterType.swift; sourceTree = "<group>"; };
-		F6E79A0929EBE34D0047C93D /* GasService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasService.swift; sourceTree = "<group>"; };
-		F6E79A0B29EBE35C0047C93D /* GasRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasRequest.swift; sourceTree = "<group>"; };
 		F6E79A0D29EBED190047C93D /* AFService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -186,7 +172,6 @@
 			children = (
 				F6ADAFAA29D2390E00AE1C2C /* HomeScreen */,
 				F6ADAFA929D238F300AE1C2C /* ReportScreen */,
-				F69EB4A729DCC832003D340D /* ProgressBarViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -272,7 +257,6 @@
 				F611F4AF29D2EE2F003D4ACB /* Extensions */,
 				F611F4AE29D2EE05003D4ACB /* Views */,
 				F611F4A229D2ECC6003D4ACB /* CustomViews */,
-				F6ADAFA329D1FC8700AE1C2C /* Models */,
 				F6ADAF7A29D1F92100AE1C2C /* Info.plist */,
 				F65AB01E29EDAD58001C4E51 /* exampleData.md */,
 				F633208929F1D89000418B11 /* TASKS.md */,
@@ -349,10 +333,8 @@
 		F6E799F529EBDF750047C93D /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				F6E79A0829EBE33F0047C93D /* Services */,
-				F6E799FF29EBE2B60047C93D /* Core */,
-				F6E799F629EBDF8D0047C93D /* Model */,
 				F6E79A0D29EBED190047C93D /* AFService.swift */,
+				F6E799F629EBDF8D0047C93D /* Model */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -360,32 +342,13 @@
 		F6E799F629EBDF8D0047C93D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F6ADAFA329D1FC8700AE1C2C /* Models */,
 				F6E799F729EBDFAB0047C93D /* SensorData.swift */,
 				F6E799F929EBE0570047C93D /* RealTimeGasRequest.swift */,
 				F6E799FB29EBE0B70047C93D /* RealTimeGasResponse.swift */,
 				F6E799FD29EBE2260047C93D /* RealTimeAllGasses.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		F6E799FF29EBE2B60047C93D /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				F6E79A0029EBE2C00047C93D /* Network.swift */,
-				F6E79A0229EBE2D40047C93D /* Requestable.swift */,
-				F6E79A0429EBE2E50047C93D /* HTTPMethod.swift */,
-				F6E79A0629EBE2F70047C93D /* ParameterType.swift */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		F6E79A0829EBE33F0047C93D /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				F6E79A0929EBE34D0047C93D /* GasService.swift */,
-				F6E79A0B29EBE35C0047C93D /* GasRequest.swift */,
-			);
-			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -534,26 +497,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				F611F4B629D2EE9F003D4ACB /* UIView+Extension.swift in Sources */,
-				F69EB4A829DCC832003D340D /* ProgressBarViewController.swift in Sources */,
-				F6E79A0129EBE2C00047C93D /* Network.swift in Sources */,
 				F6ADAF7129D1F92000AE1C2C /* ViewController.swift in Sources */,
 				F6E799FA29EBE0570047C93D /* RealTimeGasRequest.swift in Sources */,
 				F633208829F1919B00418B11 /* GasViewModel.swift in Sources */,
-				F6E79A0729EBE2F70047C93D /* ParameterType.swift in Sources */,
 				F6E799F829EBDFAB0047C93D /* SensorData.swift in Sources */,
 				F611F4B129D2EE43003D4ACB /* String+Extension.swift in Sources */,
 				F6ADAF6D29D1F92000AE1C2C /* AppDelegate.swift in Sources */,
 				F69EB4A529DCC216003D340D /* GaugeCollectionViewCell.swift in Sources */,
 				F6ADAFAD29D2394600AE1C2C /* ReportViewController.swift in Sources */,
-				F6E79A0529EBE2E50047C93D /* HTTPMethod.swift in Sources */,
-				F6E79A0329EBE2D40047C93D /* Requestable.swift in Sources */,
 				F6E799FC29EBE0B70047C93D /* RealTimeGasResponse.swift in Sources */,
 				F6447D4729DEAFAB0094C466 /* GaugeView.swift in Sources */,
 				F69EB4A029DCA502003D340D /* LineChartDataSetCreator.swift in Sources */,
 				F611F4B429D2EE6F003D4ACB /* CardView.swift in Sources */,
 				F611F50129D45B37003D4ACB /* ChartData.swift in Sources */,
 				F6E0998329E1A90F002D4809 /* TemperatureData.swift in Sources */,
-				F6E79A0C29EBE35C0047C93D /* GasRequest.swift in Sources */,
 				F611F4F329D44368003D4ACB /* GraphView.swift in Sources */,
 				F6E0998B29E1AE0F002D4809 /* GasCategory.swift in Sources */,
 				F611F4A729D2ED2D003D4ACB /* CategoryCollectionViewCell.swift in Sources */,
@@ -564,7 +521,6 @@
 				F611F4BC29D32316003D4ACB /* TimeCategoryCollectionViewCell.swift in Sources */,
 				F611F4B829D3217F003D4ACB /* TimeCategory.swift in Sources */,
 				F6ADAF6F29D1F92000AE1C2C /* SceneDelegate.swift in Sources */,
-				F6E79A0A29EBE34D0047C93D /* GasService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

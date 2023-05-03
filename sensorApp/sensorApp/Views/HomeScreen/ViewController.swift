@@ -105,12 +105,12 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
         if indexPath.item == 0 {
             // Set larger size for first item
             let width = collectionView.bounds.width
-            let height = collectionView.bounds.height * 0.5
+            let height = width
             return CGSize(width: width, height: height)
         } else {
             // Set default size for all other items
             let width = (collectionView.bounds.width - 10)
-            return CGSize(width: width, height: 80)
+            return CGSize(width: width, height: width / 5)
         }
     }
     

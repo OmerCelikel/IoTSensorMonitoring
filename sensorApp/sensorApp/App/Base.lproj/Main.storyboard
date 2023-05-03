@@ -81,9 +81,7 @@
                             <constraint firstItem="HUY-DK-FL5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="n5R-SR-hdq"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Real - Time Monitoring" id="0Le-jW-Ld8">
-                        <barButtonItem key="rightBarButtonItem" title="Item" style="plain" id="qCG-nF-AOm"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Real - Time Monitoring" id="0Le-jW-Ld8"/>
                     <connections>
                         <outlet property="collectionView" destination="e13-G6-2f9" id="Ddd-TD-PkW"/>
                         <segue destination="Mxp-eb-8HZ" kind="show" identifier="showReport" id="BzL-Id-05I"/>

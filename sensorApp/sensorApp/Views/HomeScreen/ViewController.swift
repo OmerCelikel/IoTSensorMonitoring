@@ -28,25 +28,11 @@ class ViewController: UIViewController {
         
         // Register collection view cell
         collectionView.register(UINib(nibName: "LineChartsCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "LineChartsCollectionViewCell")
-        
         collectionView.register(UINib(nibName: "GaugeCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "GaugeCollectionViewCell")
         
         timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(refreshData), userInfo: nil, repeats: true)
-        
         refreshData()
-        
-        //        viewModel.postGasReport(date: "-1m", field: "DHT22_Temperature") { result in
-        //            switch result {
-        //            case .success(let reports):
-        //                self.reportGas = reports
-        //                //print("REPOrts : \(reports)")
-        //                self.gasValueListCount = reports.count
-        //            case .failure(let error):
-        //                print(error)
-        //            }
-        //        }
-        
-        
+
     }
     func averageTemperatureCalc(gasDataArr: [Gas]) -> Double {
         var totalTemp = 0.0

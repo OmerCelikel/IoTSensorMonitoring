@@ -30,7 +30,6 @@ class ReportViewController: UIViewController {
     var selectedTimeCategory: TimeCategory?
     let reportViewModel = ReportViewModel()
     var selectedCardView: CardView?
-    let lineColor = UIColor(red: 48/255, green: 193/255, blue: 246/255, alpha: 1.0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,7 +78,7 @@ class ReportViewController: UIViewController {
     func setUpLineGraph(dataEntries: [ChartDataEntry]) {
         // Create a LineChartDataSet from the data entries
         let dataSet = LineChartDataSet(entries: dataEntries, label: "Random Data")
-        dataSet.colors = [lineColor]
+        dataSet.colors = [Colors.lineGraphLineColor]
         dataSet.lineWidth = 3.0
         dataSet.drawValuesEnabled = false
         
@@ -140,7 +139,7 @@ extension ReportViewController: UICollectionViewDelegate, UICollectionViewDataSo
         guard let cardView = cell.contentView.subviews.first(where: { $0 is CardView }) as? CardView else { return }
         
         cardView.isSelected = true
-        cardView.layer.backgroundColor = lineColor.cgColor
+        cardView.layer.backgroundColor = Colors.lineGraphLineColor.cgColor
         
         selectedCardView?.isSelected = false
         selectedCardView?.layer.backgroundColor = UIColor.white.cgColor

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -21,10 +22,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="100" height="50"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIp-lE-uMA">
-                                <rect key="frame" x="20" y="13" width="60" height="24"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="24" id="cxE-e6-1Jj"/>
-                                </constraints>
+                                <rect key="frame" x="8" y="8" width="84" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -32,11 +30,10 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="100" id="00r-yE-V9m"/>
-                            <constraint firstItem="lIp-lE-uMA" firstAttribute="centerY" secondItem="cBh-g5-8Ru" secondAttribute="centerY" id="50C-vz-fiK"/>
-                            <constraint firstItem="lIp-lE-uMA" firstAttribute="leading" secondItem="cBh-g5-8Ru" secondAttribute="leading" constant="20" id="f1K-ni-JfL"/>
-                            <constraint firstAttribute="height" constant="50" id="jeh-OK-q9g"/>
-                            <constraint firstAttribute="trailing" secondItem="lIp-lE-uMA" secondAttribute="trailing" constant="20" id="lD3-eL-kJ2"/>
+                            <constraint firstItem="lIp-lE-uMA" firstAttribute="top" secondItem="cBh-g5-8Ru" secondAttribute="top" constant="8" id="J8i-eC-CgV"/>
+                            <constraint firstAttribute="trailing" secondItem="lIp-lE-uMA" secondAttribute="trailing" constant="8" id="rBx-1l-uDV"/>
+                            <constraint firstItem="lIp-lE-uMA" firstAttribute="leading" secondItem="cBh-g5-8Ru" secondAttribute="leading" constant="8" id="tCh-QP-CQT"/>
+                            <constraint firstAttribute="bottom" secondItem="lIp-lE-uMA" secondAttribute="bottom" constant="8" id="z9x-rx-1bp"/>
                         </constraints>
                     </view>
                 </subviews>

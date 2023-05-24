@@ -40,8 +40,15 @@ struct Gas: Codable {
 }
 
 class AFGasService {
+    //phone
+    //private let baseURL = "http://192.168.43.56:5000"
     
+    //base
     private let baseURL = "http://127.0.0.1:5000"
+    
+    //wifi
+//    private let baseURL = "http://10.76.149.209:5000"
+    
     
     func getAllGases(completion: @escaping (Result<[Gas], Error>) -> Void) {
         AF.request("\(baseURL)/values").validate().responseDecodable(of: [Gas].self) { response in

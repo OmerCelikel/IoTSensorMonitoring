@@ -23,6 +23,9 @@
 		F633208829F1919B00418B11 /* GasViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F633208729F1919B00418B11 /* GasViewModel.swift */; };
 		F638ADAB2A03E21600E67911 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F638ADAA2A03E21600E67911 /* Colors.swift */; };
 		F6447D4729DEAFAB0094C466 /* GaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6447D4629DEAFAB0094C466 /* GaugeView.swift */; };
+		F664C88F2A2FB75300D8162F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F664C88E2A2FB75300D8162F /* GoogleService-Info.plist */; };
+		F664C8922A2FB81400D8162F /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = F664C8912A2FB81400D8162F /* FirebaseAnalytics */; };
+		F664C8942A2FB81400D8162F /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = F664C8932A2FB81400D8162F /* FirebaseMessaging */; };
 		F69EB4A029DCA502003D340D /* LineChartDataSetCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69EB49F29DCA502003D340D /* LineChartDataSetCreator.swift */; };
 		F69EB4A529DCC216003D340D /* GaugeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69EB4A329DCC216003D340D /* GaugeCollectionViewCell.swift */; };
 		F69EB4A629DCC216003D340D /* GaugeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F69EB4A429DCC216003D340D /* GaugeCollectionViewCell.xib */; };
@@ -84,6 +87,8 @@
 		F638ADAA2A03E21600E67911 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		F6447D4629DEAFAB0094C466 /* GaugeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugeView.swift; sourceTree = "<group>"; };
 		F65AB01E29EDAD58001C4E51 /* exampleData.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = exampleData.md; sourceTree = "<group>"; };
+		F664C88E2A2FB75300D8162F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F664C8952A2FBCD000D8162F /* sensorApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = sensorApp.entitlements; sourceTree = "<group>"; };
 		F69EB49F29DCA502003D340D /* LineChartDataSetCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartDataSetCreator.swift; sourceTree = "<group>"; };
 		F69EB4A329DCC216003D340D /* GaugeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugeCollectionViewCell.swift; sourceTree = "<group>"; };
 		F69EB4A429DCC216003D340D /* GaugeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GaugeCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -117,6 +122,8 @@
 			files = (
 				F6AEDC4E29F4234300F7A24B /* Kingfisher in Frameworks */,
 				F6AEDC4029F41FF300F7A24B /* Alamofire in Frameworks */,
+				F664C8942A2FB81400D8162F /* FirebaseMessaging in Frameworks */,
+				F664C8922A2FB81400D8162F /* FirebaseAnalytics in Frameworks */,
 				F6AEDC4B29F422EE00F7A24B /* Charts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,12 +262,14 @@
 		F6ADAF6B29D1F92000AE1C2C /* sensorApp */ = {
 			isa = PBXGroup;
 			children = (
+				F664C8952A2FBCD000D8162F /* sensorApp.entitlements */,
 				F6ADAFAB29D2391B00AE1C2C /* App */,
 				F6E799F529EBDF750047C93D /* Network */,
 				F611F4AF29D2EE2F003D4ACB /* Extensions */,
 				F611F4AE29D2EE05003D4ACB /* Views */,
 				F611F4A229D2ECC6003D4ACB /* CustomViews */,
 				F6ADAF7A29D1F92100AE1C2C /* Info.plist */,
+				F664C88E2A2FB75300D8162F /* GoogleService-Info.plist */,
 				F65AB01E29EDAD58001C4E51 /* exampleData.md */,
 				F633208929F1D89000418B11 /* TASKS.md */,
 			);
@@ -374,6 +383,8 @@
 				F6AEDC3F29F41FF300F7A24B /* Alamofire */,
 				F6AEDC4A29F422EE00F7A24B /* Charts */,
 				F6AEDC4D29F4234300F7A24B /* Kingfisher */,
+				F664C8912A2FB81400D8162F /* FirebaseAnalytics */,
+				F664C8932A2FB81400D8162F /* FirebaseMessaging */,
 			);
 			productName = sensorApp;
 			productReference = F6ADAF6929D1F92000AE1C2C /* sensorApp.app */;
@@ -451,6 +462,7 @@
 				F6AEDC3E29F41FF300F7A24B /* XCRemoteSwiftPackageReference "Alamofire" */,
 				F6AEDC4929F422EE00F7A24B /* XCRemoteSwiftPackageReference "Charts" */,
 				F6AEDC4C29F4234300F7A24B /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				F664C8902A2FB81400D8162F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = F6ADAF6A29D1F92000AE1C2C /* Products */;
 			projectDirPath = "";
@@ -470,6 +482,7 @@
 			files = (
 				F611F4FF29D4573A003D4ACB /* LineChartsCollectionViewCell.xib in Resources */,
 				F611F4BD29D32316003D4ACB /* TimeCategoryCollectionViewCell.xib in Resources */,
+				F664C88F2A2FB75300D8162F /* GoogleService-Info.plist in Resources */,
 				F611F4A829D2ED2D003D4ACB /* CategoryCollectionViewCell.xib in Resources */,
 				F69EB4A629DCC216003D340D /* GaugeCollectionViewCell.xib in Resources */,
 				F6ADAF7929D1F92100AE1C2C /* LaunchScreen.storyboard in Resources */,
@@ -699,6 +712,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = sensorApp/sensorApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = R7KP5757Z8;
@@ -727,6 +741,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = sensorApp/sensorApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = R7KP5757Z8;
@@ -868,6 +883,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		F664C8902A2FB81400D8162F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
 		F6AEDC3E29F41FF300F7A24B /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -895,6 +918,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		F664C8912A2FB81400D8162F /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F664C8902A2FB81400D8162F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		F664C8932A2FB81400D8162F /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F664C8902A2FB81400D8162F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
 		F6AEDC3F29F41FF300F7A24B /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F6AEDC3E29F41FF300F7A24B /* XCRemoteSwiftPackageReference "Alamofire" */;

@@ -28,29 +28,18 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AU6-Ug-Phe" customClass="GaugeView" customModule="sensorApp" customModuleProvider="target">
-                                <rect key="frame" x="10" y="63.333333333333329" width="279" height="189.66666666666669"/>
+                                <rect key="frame" x="10" y="63.333333333333329" width="279" height="237.66666666666669"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygP-1n-AN5">
-                                <rect key="frame" x="30" y="263" width="239" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="See Report"/>
-                                <connections>
-                                    <action selector="seeReportBtnTapped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="eqt-jR-Ia0"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ygP-1n-AN5" firstAttribute="leading" secondItem="dwv-At-tSb" secondAttribute="leading" constant="30" id="AML-8o-mYi"/>
-                            <constraint firstAttribute="trailing" secondItem="ygP-1n-AN5" secondAttribute="trailing" constant="30" id="Drx-eE-2fH"/>
                             <constraint firstAttribute="trailing" secondItem="AU6-Ug-Phe" secondAttribute="trailing" constant="10" id="E1F-FJ-Y2d"/>
                             <constraint firstItem="AU6-Ug-Phe" firstAttribute="top" secondItem="GeA-68-CSA" secondAttribute="bottom" constant="20" id="GRt-Nb-F6m"/>
-                            <constraint firstItem="ygP-1n-AN5" firstAttribute="top" secondItem="AU6-Ug-Phe" secondAttribute="bottom" constant="10" id="Q7m-ov-A68"/>
                             <constraint firstItem="AU6-Ug-Phe" firstAttribute="leading" secondItem="dwv-At-tSb" secondAttribute="leading" constant="10" id="Tba-Ot-HAC"/>
                             <constraint firstItem="GeA-68-CSA" firstAttribute="top" secondItem="dwv-At-tSb" secondAttribute="top" constant="20" id="UtP-vE-v5C"/>
+                            <constraint firstAttribute="bottom" secondItem="AU6-Ug-Phe" secondAttribute="bottom" constant="5" id="c0a-Lz-vss"/>
                             <constraint firstItem="GeA-68-CSA" firstAttribute="leading" secondItem="dwv-At-tSb" secondAttribute="leading" constant="10" id="itz-TK-SlF"/>
-                            <constraint firstAttribute="bottom" secondItem="ygP-1n-AN5" secondAttribute="bottom" constant="8" id="tZz-NP-dD4"/>
                         </constraints>
                     </view>
                 </subviews>

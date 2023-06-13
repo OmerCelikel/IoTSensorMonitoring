@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -54,6 +55,7 @@
             <connections>
                 <outlet property="gasNameTextLabel" destination="5xI-Sb-Rmd" id="KAM-fx-EII"/>
                 <outlet property="gasValueTextLabel" destination="0DO-vw-sEu" id="z1H-Bo-hw5"/>
+                <outlet property="graphView" destination="AnG-ad-CoD" id="4QM-ee-X30"/>
             </connections>
             <point key="canvasLocation" x="64.615384615384613" y="61.492890995260659"/>
         </collectionViewCell>

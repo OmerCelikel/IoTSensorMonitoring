@@ -14,11 +14,14 @@ class LineChartsCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var gasNameTextLabel: UILabel!
     @IBOutlet weak var gasValueTextLabel: UILabel!
         
+    @IBOutlet weak var graphView: GraphView!
+    
     func setup(with gasData: Gas) {
         
         gasNameTextLabel.text = gasData.name
         gasValueTextLabel.text = String(format: "%.2f",gasData.value)
 //        self.gasValueTextLabel.textColor = (gasData.value > self.gasValueTextLabel.text.flatMap(Double.init) ?? 0) ? .green : .red
+        self.graphView.backgroundColor = (gasData.value > (self.gasValueTextLabel.text.flatMap(Double.init) ?? 0.0) * 0.15 ) ? .white : .red
     }
     
     func setupEmpty() {

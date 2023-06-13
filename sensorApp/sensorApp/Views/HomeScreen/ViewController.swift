@@ -34,6 +34,21 @@ class ViewController: UIViewController {
         refreshData()
 
     }
+    
+    public func setNotificationText(asNotification: String) {
+        print("asNotification", asNotification)
+        showAlert(sensorType: asNotification)
+    }
+    
+    func showAlert(sensorType: String) {
+        let dialogMessage = UIAlertController(title: "Alert", message: "\(sensorType) is out of range!", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "OK", style: .default) { _ in
+            print("OK button tapped")
+        }
+        dialogMessage.addAction(ok)
+        self.present(dialogMessage, animated: true, completion: nil)
+    }
+    
     func averageTemperatureCalc(gasDataArr: [Gas]) -> Double {
         var totalTemp = 0.0
         var countGas = 0

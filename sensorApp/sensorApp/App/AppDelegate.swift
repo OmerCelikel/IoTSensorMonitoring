@@ -10,9 +10,10 @@ import FirebaseCore
 import FirebaseMessaging
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate {
     
     let gcmMessageIDKey = "gcm.Message_ID"
+    var notification: String!
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -68,11 +69,33 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         return [[.alert, .sound]]
     }
     
+//    func userNotificationCenter(_ center: UNUserNotificationCenter,
+//                                didReceive response: UNNotificationResponse) async {
+//        let userInfo = response.notification.request.content.userInfo
+//
+//        print(userInfo)
+//    }
+    
+    // When User Taps the notification
     func userNotificationCenter(_ center: UNUserNotificationCenter,
-                                didReceive response: UNNotificationResponse) async {
+                                didReceive response: UNNotificationResponse,
+                                withCompletionHandler completionHandler: @escaping () -> Void) {
         let userInfo = response.notification.request.content.userInfo
+        print(response.notification.request.content.title)
         
+        notification = response.notification.request.content.title
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        // mainViewController
+        if let mainViewControllerVC = storyboard.instantiateViewController(identifier: "mainViewController") as? ViewController {
+            mainViewControllerVC.setNotificationText(asNotification: notification)
+        }
+        
+        // With swizzling disabled you must let Messaging know about the message, for Analytics
+        Messaging.messaging().appDidReceiveMessage(userInfo)
+        // Print full message.
         print(userInfo)
+        completionHandler()
     }
     
     func application(_ application: UIApplication,
@@ -95,17 +118,17 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     
 }
 
-extension AppDelegate: MessagingDelegate {
-    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
-        print("Firebase registration token: \(String(describing: fcmToken))")
-        
-        let dataDict: [String: String] = ["token": fcmToken ?? ""]
-        NotificationCenter.default.post(
-            name: Notification.Name("FCMToken"),
-            object: nil,
-            userInfo: dataDict
-        )
-        
-    }
-    
-}
+//extension AppDelegate: MessagingDelegate {
+//    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
+//        print("Firebase registration token: \(String(describing: fcmToken))")
+//
+//        let dataDict: [String: String] = ["token": fcmToken ?? ""]
+//        NotificationCenter.default.post(
+//            name: Notification.Name("FCMToken"),
+//            object: nil,
+//            userInfo: dataDict
+//        )
+//
+//    }
+//
+//}

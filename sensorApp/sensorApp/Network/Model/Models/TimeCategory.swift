@@ -6,7 +6,7 @@
 //
 
 import Foundation
-struct TimeCategory: Decodable {
+struct TimeCategory: Equatable {
     let id, name: String?
     
     enum CodingKeys: String, CodingKey {

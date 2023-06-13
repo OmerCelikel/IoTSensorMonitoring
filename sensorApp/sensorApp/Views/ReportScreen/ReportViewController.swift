@@ -34,7 +34,7 @@ class ReportViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         registerCells()
-        selectedTimeCategory = times[0] // set default time category
+        selectedTimeCategory = times.first // set default time category
         updateGasReport()
         
     }

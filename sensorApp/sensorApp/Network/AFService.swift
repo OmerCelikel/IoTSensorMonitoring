@@ -41,8 +41,8 @@ struct Gas: Codable {
 
 class AFGasService {
     //phone
-//    private let baseURL = "http://192.168.43.56:5000"
-    private let baseURL = "http://192.168.1.42:5000"
+    private let baseURL = "http://192.168.43.56:5000"
+//    private let baseURL = "http://192.168.1.42:5000"
     //base
 //    private let baseURL = "http://127.0.0.1:5000"
     

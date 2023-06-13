@@ -52,52 +52,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
     
-    
 }
-
 
 extension AppDelegate: UNUserNotificationCenterDelegate {
     // Receive displayed notifications for iOS 10 devices.
-    func userNotificationCenter(_ center: UNUserNotificationCenter,
-                                willPresent notification: UNNotification) async
-    -> UNNotificationPresentationOptions {
-        let userInfo = notification.request.content.userInfo
-        
-        // Print full message.
-        print(userInfo)
-        
-        // Change this to your preferred presentation option
-        return [[.alert, .sound]]
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        let options: UNNotificationPresentationOptions = [.banner, .sound]
+        completionHandler(options)
     }
-    
-//    func userNotificationCenter(_ center: UNUserNotificationCenter,
-//                                didReceive response: UNNotificationResponse) async {
-//        let userInfo = response.notification.request.content.userInfo
-//
-//        print(userInfo)
-//    }
-    
-    // When User Taps the notification
-//    func userNotificationCenter(_ center: UNUserNotificationCenter,
-//                                didReceive response: UNNotificationResponse,
-//                                withCompletionHandler completionHandler: @escaping () -> Void) {
-//        let userInfo = response.notification.request.content.userInfo
-//        print(response.notification.request.content.title)
-//
-//        notification = response.notification.request.content.title
-//
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        // mainViewController
-//        if let mainViewControllerVC = storyboard.instantiateViewController(identifier: "mainViewController") as? ViewController {
-//            mainViewControllerVC.setNotificationText(asNotification: notification)
-//        }
-//
-//        // With swizzling disabled you must let Messaging know about the message, for Analytics
-//        Messaging.messaging().appDidReceiveMessage(userInfo)
-//        // Print full message.
-//        print(userInfo)
-//        completionHandler()
-//    }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter,
                                 didReceive response: UNNotificationResponse,
@@ -112,7 +74,6 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         // With swizzling disabled, you must let Messaging know about the message for Analytics
         Messaging.messaging().appDidReceiveMessage(userInfo)
         
-        // Print full message
         print(userInfo)
         
         completionHandler()
@@ -127,29 +88,9 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         if let messageID = userInfo[gcmMessageIDKey] {
             print("Message ID: \(messageID)")
         }
-        
-        
-        // Print full message.
         print(userInfo)
-        
-        
-        
         return UIBackgroundFetchResult.newData
     }
     
 }
 
-//extension AppDelegate: MessagingDelegate {
-//    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
-//        print("Firebase registration token: \(String(describing: fcmToken))")
-//
-//        let dataDict: [String: String] = ["token": fcmToken ?? ""]
-//        NotificationCenter.default.post(
-//            name: Notification.Name("FCMToken"),
-//            object: nil,
-//            userInfo: dataDict
-//        )
-//
-//    }
-//
-//}

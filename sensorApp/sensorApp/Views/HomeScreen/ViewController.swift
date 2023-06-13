@@ -80,19 +80,27 @@ class ViewController: UIViewController {
     }
     
     @objc func refreshData() {
-        viewModel.getAllGases { result in
+        viewModel.getAllGases { [weak self] result in
+            guard let self = self else { return } // Ensure self is still available
+            
             switch result {
-            case.success(let gases):
-                self.realTimeAllGases = gases
+            case .success(let gases):
+                // Filter out the unwanted gas
+                let filteredGases = gases.filter { $0.name != "MQ6_LPG" }
+                
+                self.realTimeAllGases = filteredGases
+                
                 DispatchQueue.main.async {
                     self.collectionView.reloadData()
                 }
-                self.averageTemperature = self.averageTemperatureCalc(gasDataArr: self.realTimeAllGases)
+                
+                self.averageTemperature = self.averageTemperatureCalc(gasDataArr: filteredGases)
             case .failure(let error):
                 print(error)
             }
         }
     }
+
 }
 
 extension ViewController: UICollectionViewDataSource {

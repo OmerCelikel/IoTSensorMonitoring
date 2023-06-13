@@ -11,7 +11,8 @@ import FirebaseMessaging
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate {
-    
+    weak var notificationDelegate: NotificationDelegate?
+
     let gcmMessageIDKey = "gcm.Message_ID"
     var notification: String!
     
@@ -77,26 +78,46 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
 //    }
     
     // When User Taps the notification
+//    func userNotificationCenter(_ center: UNUserNotificationCenter,
+//                                didReceive response: UNNotificationResponse,
+//                                withCompletionHandler completionHandler: @escaping () -> Void) {
+//        let userInfo = response.notification.request.content.userInfo
+//        print(response.notification.request.content.title)
+//
+//        notification = response.notification.request.content.title
+//
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        // mainViewController
+//        if let mainViewControllerVC = storyboard.instantiateViewController(identifier: "mainViewController") as? ViewController {
+//            mainViewControllerVC.setNotificationText(asNotification: notification)
+//        }
+//
+//        // With swizzling disabled you must let Messaging know about the message, for Analytics
+//        Messaging.messaging().appDidReceiveMessage(userInfo)
+//        // Print full message.
+//        print(userInfo)
+//        completionHandler()
+//    }
+    
     func userNotificationCenter(_ center: UNUserNotificationCenter,
                                 didReceive response: UNNotificationResponse,
                                 withCompletionHandler completionHandler: @escaping () -> Void) {
         let userInfo = response.notification.request.content.userInfo
         print(response.notification.request.content.title)
         
-        notification = response.notification.request.content.title
+        // Inside the userNotificationCenter(_:didReceive:withCompletionHandler:) method
+        let notificationTitle = response.notification.request.content.title
+        notificationDelegate?.didReceiveNotification(withTitle: notificationTitle)
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        // mainViewController
-        if let mainViewControllerVC = storyboard.instantiateViewController(identifier: "mainViewController") as? ViewController {
-            mainViewControllerVC.setNotificationText(asNotification: notification)
-        }
-        
-        // With swizzling disabled you must let Messaging know about the message, for Analytics
+        // With swizzling disabled, you must let Messaging know about the message for Analytics
         Messaging.messaging().appDidReceiveMessage(userInfo)
-        // Print full message.
+        
+        // Print full message
         print(userInfo)
+        
         completionHandler()
     }
+
     
     func application(_ application: UIApplication,
                      didReceiveRemoteNotification userInfo: [AnyHashable: Any]) async

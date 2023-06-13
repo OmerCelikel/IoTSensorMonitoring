@@ -8,6 +8,11 @@
 import UIKit
 import Charts
 
+protocol NotificationDelegate: AnyObject {
+    func didReceiveNotification(withTitle title: String)
+}
+
+
 class ViewController: UIViewController {
     
     let viewModel = GasViewModel()
@@ -29,6 +34,10 @@ class ViewController: UIViewController {
         // Register collection view cell
         collectionView.register(UINib(nibName: "LineChartsCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "LineChartsCollectionViewCell")
         collectionView.register(UINib(nibName: "GaugeCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "GaugeCollectionViewCell")
+        
+        let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        appDelegate?.notificationDelegate = self
+
         
         timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(refreshData), userInfo: nil, repeats: true)
         refreshData()
@@ -129,4 +138,10 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
         }
     }
     
+}
+
+extension ViewController: NotificationDelegate {
+    func didReceiveNotification(withTitle title: String) {
+        showAlert(sensorType: title)
+    }
 }

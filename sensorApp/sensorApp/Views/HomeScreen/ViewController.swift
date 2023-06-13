@@ -24,6 +24,12 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    @IBOutlet weak var warningView: UIView!
+    
+    @IBOutlet weak var warningText: UILabel!
+    
+    @IBOutlet weak var closeWarningButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,9 +50,15 @@ class ViewController: UIViewController {
 
     }
     
-    public func setNotificationText(asNotification: String) {
-        print("asNotification", asNotification)
+    public func showWarningView(asNotification: String, isItHidden: Bool) {
+        warningView.isHidden = isItHidden
+        warningText.text = "Warning! \(asNotification) values is out of range."
         showAlert(sensorType: asNotification)
+        
+    }
+    
+    @IBAction func closeWarningButtonTapped(_ sender: Any) {
+        warningView.isHidden = true
     }
     
     func showAlert(sensorType: String) {
@@ -143,5 +155,6 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
 extension ViewController: NotificationDelegate {
     func didReceiveNotification(withTitle title: String) {
         showAlert(sensorType: title)
+        showWarningView(asNotification: title, isItHidden: false)
     }
 }

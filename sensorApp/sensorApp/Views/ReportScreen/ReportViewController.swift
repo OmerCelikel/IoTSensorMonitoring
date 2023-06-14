@@ -15,6 +15,8 @@ class ReportViewController: UIViewController {
     @IBOutlet weak var gasNameLabel: UILabel!
     @IBOutlet weak var valueLabel: UILabel!
     
+    let dataInterval: TimeInterval = 10.0 // Set the desired interval in seconds
+    
     var times: [TimeCategory] = [
         .init(id: "-1m", name: "1 Min"),
         .init(id: "-5m", name: "5 Min"),
@@ -65,19 +67,25 @@ class ReportViewController: UIViewController {
     }
     
     func dataSetForLineChart(gasData: [Gas]) {
-        // Iterate through the data array,
+        let filteredGasData = gasData.filter { dataPoint in
+            let timeInterval = dataPoint.time.timeIntervalSince1970
+            return timeInterval.truncatingRemainder(dividingBy: dataInterval) == 0
+        }
+        
         var count = 0.0
-        for dataPoint in gasData {
+        for dataPoint in filteredGasData {
             let newEntry = ChartDataEntry(x: count, y: dataPoint.value)
             dataEntries.append(newEntry)
             count += 1
         }
+        
         setUpLineGraph(dataEntries: dataEntries)
     }
     
+    
     func setUpLineGraph(dataEntries: [ChartDataEntry]) {
         // Create a LineChartDataSet from the data entries
-        let dataSet = LineChartDataSet(entries: dataEntries, label: "Random Data")
+        let dataSet = LineChartDataSet(entries: dataEntries, label: selectedGasName)
         dataSet.colors = [Colors.lineGraphLineColor]
         dataSet.lineWidth = 3.0
         dataSet.drawValuesEnabled = false

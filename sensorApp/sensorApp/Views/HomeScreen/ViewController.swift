@@ -42,7 +42,7 @@ class ViewController: UIViewController {
         appDelegate?.notificationDelegate = self
 
         
-        timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(refreshData), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(refreshData), userInfo: nil, repeats: true)
         refreshData()
 
     }

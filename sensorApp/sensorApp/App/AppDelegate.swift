@@ -69,7 +69,9 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         
         // Inside the userNotificationCenter(_:didReceive:withCompletionHandler:) method
         let notificationTitle = response.notification.request.content.title
-        notificationDelegate?.didReceiveNotification(withTitle: notificationTitle)
+        var sensorType = notificationTitle.replacingOccurrences(of: " Notification", with: "").trimmingCharacters(in: .whitespaces)
+
+        notificationDelegate?.didReceiveNotification(withTitle: sensorType)
         
         // With swizzling disabled, you must let Messaging know about the message for Analytics
         Messaging.messaging().appDidReceiveMessage(userInfo)

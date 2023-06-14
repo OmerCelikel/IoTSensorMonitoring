@@ -39,27 +39,37 @@ class ReportViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         registerCells()
-        selectedTimeCategory = times.first // set default time category
+        selectedTimeCategory = nil // set default time category
         updateGasReport()
         
     }
     
     func updateGasReport() {
-        let date = selectedTimeCategory?.id ?? "-1m"
-        reportViewModel.postGasReport(date: date, field: selectedGasName) { result in
-            switch result {
-            case .success(let reports):
-                self.specificGasData = reports
-                self.clearLineChart()
-                self.dataSetForLineChart(gasData: self.specificGasData)
-                self.gasNameLabel.text = self.selectedGasName
-                self.valueLabel.text = "Value: \(String(format: "%.2f",self.selectedGasValue))"
-                self.chartTitleLabel.text = self.extractLabel(from: self.selectedGasName)
-            case .failure(let error):
-                print(error)
+        self.gasNameLabel.text = self.selectedGasName
+        self.valueLabel.text = "Value: \(String(format: "%.2f",self.selectedGasValue))"
+        if let selectedTimeCategory = selectedTimeCategory {
+            let date = selectedTimeCategory.id ?? "-1m"
+            reportViewModel.postGasReport(date: date, field: selectedGasName) { result in
+                switch result {
+                case .success(let reports):
+                    self.specificGasData = reports
+                    self.clearLineChart()
+                    self.dataSetForLineChart(gasData: self.specificGasData)
+                    self.chartTitleLabel.text = self.extractLabel(from: self.selectedGasName)
+                case .failure(let error):
+                    print(error)
+                }
             }
+        } else {
+            // Display the message on the chart view
+            clearLineChart()
+            chartTitleLabel.text = "Please select a time period to display the values"
+            chartTitleLabel.textColor = UIColor.gray
+            chartTitleLabel.font = UIFont.systemFont(ofSize: 12)
+            // You may also consider hiding other labels and views related to the chart data
         }
     }
+    
     func clearLineChart() {
         lineChartView.clear()
         dataEntries.removeAll()
@@ -117,6 +127,9 @@ class ReportViewController: UIViewController {
         // Set the data property of the LineChartView to the LineChartData
         lineChartView.data = chartData
         lineChartView.animate(xAxisDuration: 1.5)
+        
+        chartTitleLabel.textColor = UIColor.darkGray
+        chartTitleLabel.font = UIFont.systemFont(ofSize: 14)
     }
     
     // Function to extract label from gas name
@@ -141,7 +154,7 @@ extension ReportViewController: UICollectionViewDelegate, UICollectionViewDataSo
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch collectionView {
-
+            
         case timeCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TimeCategoryCollectionViewCell.identifier, for: indexPath) as! TimeCategoryCollectionViewCell
             cell.setup(category: times[indexPath.row])

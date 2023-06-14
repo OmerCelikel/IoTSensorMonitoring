@@ -237,6 +237,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="jI7-5C-1Kh"/>
                     <connections>
+                        <outlet property="chartTitleLabel" destination="cxE-D9-NGw" id="AQL-5M-0Ui"/>
                         <outlet property="gasNameLabel" destination="T8o-pq-NyQ" id="wKP-vq-Z9x"/>
                         <outlet property="lineChartView" destination="m7x-GD-Nzg" id="SRF-bf-kJW"/>
                         <outlet property="timeCollectionView" destination="TPc-XM-EvJ" id="RCR-6c-JEl"/>

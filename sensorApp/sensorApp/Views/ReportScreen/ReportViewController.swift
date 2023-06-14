@@ -15,6 +15,9 @@ class ReportViewController: UIViewController {
     @IBOutlet weak var gasNameLabel: UILabel!
     @IBOutlet weak var valueLabel: UILabel!
     
+    @IBOutlet weak var chartTitleLabel: UILabel!
+    
+    
     let dataInterval: TimeInterval = 10.0 // Set the desired interval in seconds
     
     var times: [TimeCategory] = [
@@ -51,6 +54,7 @@ class ReportViewController: UIViewController {
                 self.dataSetForLineChart(gasData: self.specificGasData)
                 self.gasNameLabel.text = self.selectedGasName
                 self.valueLabel.text = "Value: \(String(format: "%.2f",self.selectedGasValue))"
+                self.chartTitleLabel.text = self.extractLabel(from: self.selectedGasName)
             case .failure(let error):
                 print(error)
             }
@@ -85,7 +89,7 @@ class ReportViewController: UIViewController {
     
     func setUpLineGraph(dataEntries: [ChartDataEntry]) {
         // Create a LineChartDataSet from the data entries
-        let dataSet = LineChartDataSet(entries: dataEntries, label: selectedGasName)
+        let dataSet = LineChartDataSet(entries: dataEntries, label: ("\(selectedGasName) values"))
         dataSet.colors = [Colors.lineGraphLineColor]
         dataSet.lineWidth = 3.0
         dataSet.drawValuesEnabled = false
@@ -115,6 +119,15 @@ class ReportViewController: UIViewController {
         lineChartView.animate(xAxisDuration: 1.5)
     }
     
+    // Function to extract label from gas name
+    func extractLabel(from gasName: String) -> String {
+        let components = gasName.components(separatedBy: "_")
+        if components.count > 1 {
+            return components[1]
+        } else {
+            return gasName
+        }
+    }
 }
 
 extension ReportViewController: UICollectionViewDelegate, UICollectionViewDataSource {

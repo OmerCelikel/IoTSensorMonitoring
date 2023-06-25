@@ -86,7 +86,7 @@ class ViewController: UIViewController {
             switch result {
             case .success(let gases):
                 // Filter out the unwanted gases
-                let filteredGases = gases.filter { $0.name != "MQ6_LPG" && $0.name != "DHT11_Humidity" && $0.name != "DHT11_Temperature" }
+                let filteredGases = gases.filter { $0.name != "MQ6_LPG" && $0.name != "DHT22_Humidity" && $0.name != "DHT22_Temperature" }
                 
                 self.realTimeAllGases = filteredGases
                 

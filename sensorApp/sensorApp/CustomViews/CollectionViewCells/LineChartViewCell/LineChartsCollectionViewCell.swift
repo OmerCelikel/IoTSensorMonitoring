@@ -17,7 +17,7 @@ class LineChartsCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var graphView: GraphView!
     
     private var previousGasValue: Double = 1000.0
-    private let percentageIncrease: Double = 0.15  // 5% increase
+    private let percentageIncrease: Double = 0.20  // 5% increase
 
     func setup(with gasData: Gas) {
         // Store the previous value before updating it
